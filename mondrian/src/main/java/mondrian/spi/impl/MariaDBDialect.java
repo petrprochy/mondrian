@@ -14,9 +14,6 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
-import mondrian.olap.Util;
-import mondrian.spi.Dialect.DatabaseProduct;
-
 public class MariaDBDialect extends MySqlDialect {
 
   public static final JdbcDialectFactory FACTORY =
@@ -45,4 +42,13 @@ public class MariaDBDialect extends MySqlDialect {
       return productName;
   }
 
+    /**
+     * For MariaDB always allows subquery in the from query clause. Problem is with any store engines, ex. Columnstore.
+     *
+     * @return Always <tt>true</tt>.
+     */
+    @Override
+    public boolean allowsFromQuery() {
+        return true;
+    }
 }

@@ -45,4 +45,8 @@ public class MariaDBDialectTest extends TestCase {
         final Dialect dialect = DialectManager.createDialect(dataSource, connection);
         assertEquals("Implementation class", dialect.getClass(), MariaDBDialect.class);
     }
+
+    public void testAllowFromQuery() {
+        assertTrue("Allow from query", dialect.allowsFromQuery());
+    }
 }
