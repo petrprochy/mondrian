@@ -11,7 +11,7 @@
                 <Pattern>%d %-5p [%c] %m%n</Pattern>
             </PatternLayout>
             <Policies>
-              <SizeBasedTriggeringPolicy size="10 MB" />
+              <SizeBasedTriggeringPolicy size="20 MB" />
             </Policies>
             <DefaultRolloverStrategy max="1" />
         </RollingFile>
@@ -23,7 +23,7 @@
                 <Pattern>%d %-5p [%c] %m%n</Pattern>
             </PatternLayout>
             <Policies>
-              <SizeBasedTriggeringPolicy size="10 MB" />
+              <SizeBasedTriggeringPolicy size="20 MB" />
             </Policies>
             <DefaultRolloverStrategy max="1" />
         </RollingFile>
@@ -35,7 +35,7 @@
                 <Pattern>%d %-5p [%c] %m%n</Pattern>
             </PatternLayout>
             <Policies>
-              <SizeBasedTriggeringPolicy size="10 MB" />
+              <SizeBasedTriggeringPolicy size="20 MB" />
             </Policies>
             <DefaultRolloverStrategy max="1" />
         </RollingFile>
@@ -51,10 +51,10 @@
     <Loggers>
         <Logger name="org.apache" level="info" />
         <Logger name="mondrian" level="info" />
-        <Logger name="mondrian.mdx" level="debug">
+        <Logger name="mondrian.mdx" level="debug" additivity="false">
             <appender-ref ref="MDXLOG"/>
         </Logger>
-        <Logger name="mondrian.sql" level="debug">
+        <Logger name="mondrian.sql" level="debug" additivity="false">
             <appender-ref ref="SQLLOG"/>
         </Logger>
         <Root level="info">
