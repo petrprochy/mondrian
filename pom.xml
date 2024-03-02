@@ -27,6 +27,8 @@
     <url>scm:git:git@github.com:pentaho/mondrian.git</url>
   </scm>
   <properties>
+    <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
+
     <license.licenseName>epl_only_v1</license.licenseName>
 
     <olap4j.version>1.2.0</olap4j.version>
@@ -53,7 +55,7 @@
     <profile>
       <id>mondrian</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <jdk>[1.)</jdk>
       </activation>
       <modules>
         <module>mondrian</module>
@@ -62,7 +64,7 @@
     <profile>
       <id>workbench</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <jdk>[1.)</jdk>
       </activation>
       <modules>
         <module>workbench</module>
@@ -71,11 +73,38 @@
     <profile>
       <id>assemblies</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <jdk>[1.)</jdk>
       </activation>
       <modules>
         <module>assemblies</module>
       </modules>
+    </profile>
+    <profile>
+      <id>pentaho</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-toolchains-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>toolchain</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <toolchains>
+                <jdk>
+                  <version>11</version>
+                  <vendor>sun</vendor>
+                </jdk>
+              </toolchains>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 
