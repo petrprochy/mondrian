@@ -11,6 +11,8 @@
 
 package mondrian.rolap.agg;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import mondrian.olap.Util;
 import mondrian.rolap.RolapUtil;
 import mondrian.rolap.StarColumnPredicate;
@@ -18,11 +20,13 @@ import mondrian.util.ArraySortedSet;
 import mondrian.util.Pair;
 
 import java.util.*;
+import java.util.function.Supplier;
 
 /**
  * Collection of values of one of the columns that parameterizes a
  * {@link Segment}.
  */
+@SuppressWarnings("rawtypes")
 public class SegmentAxis {
 
     /**
@@ -66,7 +70,12 @@ public class SegmentAxis {
         this.predicateAlwaysTrue =
             predicate instanceof LiteralStarPredicate
             && ((LiteralStarPredicate) predicate).getValue();
-        this.predicateValues = predicateValueSet(predicate);
+        final Supplier<Set<Object>> s = () -> {
+            final Set<Object> p = predicateValueSet( predicate );
+            if (p == null) return p;
+            return ImmutableSet.copyOf( p );
+        };
+        this.predicateValues = s.get();
         if (keys.length == 0) {
             // Optimize the case where axis is empty. Not that infrequent:
             // it records that mondrian has looked in the database and found
@@ -75,11 +84,11 @@ public class SegmentAxis {
             this.mapKeyToOffset = Collections.emptyMap();
         } else {
             this.keys = keys;
-            mapKeyToOffset =
-                new HashMap<Comparable, Integer>(keys.length * 3 / 2);
+            final Map<Comparable, Integer> m = new HashMap<>(keys.length, 1.0f);
             for (int i = 0; i < keys.length; i++) {
-                mapKeyToOffset.put(keys[i], i);
+                m.put(keys[i], i);
             }
+            mapKeyToOffset = ImmutableMap.copyOf(m);
         }
         assert predicate != null;
         assert safe || Util.isSorted(Arrays.asList(keys));
