@@ -362,7 +362,7 @@ public class NativeEvalVirtualCubeTest extends BatchTestCase {
       + "group by\n"
       + "    `customer`.`gender`\n"
       + "order by\n"
-      + "    ISNULL(`c0`) ASC, `c0` ASC";
+      + "    ISNULL(`customer`.`gender`) ASC, `customer`.`gender` ASC";
     TestContext tc = getTestContext().withFreshConnection();
     SqlPattern mysqlPattern =
       new SqlPattern(
