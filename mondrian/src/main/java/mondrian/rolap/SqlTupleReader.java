@@ -39,9 +39,8 @@ import mondrian.server.Locus;
 import mondrian.server.monitor.SqlStatementEvent;
 import mondrian.util.CancellationChecker;
 import mondrian.util.Pair;
-
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.sql.DataSource;
 import java.sql.ResultSet;
@@ -57,6 +56,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import static mondrian.olap.fun.sort.Sorter.hierarchizeTupleList;
 
@@ -646,25 +646,28 @@ public class SqlTupleReader implements TupleReader {
       boolean allTargetsAtAllLevel = targetGroup.stream()
         .allMatch( t -> t.getLevel().isAll() );
 
+      final List<Member> members = new ArrayList<>();
+      final int size = targetGroup.size();
       if ( allTargetsAtAllLevel ) {
-        continue;
+        members.addAll(
+          targetGroup.stream().map( t -> t.getLevel().getHierarchy().getAllMember() ).collect( Collectors.toList() )
+        );
       }
-
-      prepareTuples(
-        jdbcConnection, partialResult, newPartialResult, targetGroup );
-
-      int size = targetGroup.size();
-      final Iterator<Member>[] iter = new Iterator[ size ];
-      for ( int i = 0; i < size; i++ ) {
-        TargetBase t = targetGroup.get( i );
-        iter[ i ] = t.close().iterator();
-      }
-      List<Member> members = new ArrayList<>();
-      while ( iter[ 0 ].hasNext() ) {
+      else {
+        prepareTuples(
+          jdbcConnection, partialResult, newPartialResult, targetGroup );
+        @SuppressWarnings( "unchecked" ) final Iterator<Member>[] iter = new Iterator[ size ];
         for ( int i = 0; i < size; i++ ) {
-          members.add( iter[ i ].next() );
+          TargetBase t = targetGroup.get( i );
+          iter[ i ] = t.close().iterator();
+        }
+        while ( iter[ 0 ].hasNext() ) {
+          for ( int i = 0; i < size; i++ ) {
+            members.add( iter[ i ].next() );
+          }
         }
       }
+
       tupleLists.add(
         size + emptySets == 1
           ? new UnaryTupleList( members )
@@ -730,7 +733,7 @@ public class SqlTupleReader implements TupleReader {
       }
     }
     throw MondrianResource.instance().Internal.ex(
-      "Couldn't find level " + level.getName() + " in tuple." );
+      "Couldn't find level " + level + " in tuple." );
   }
 
 

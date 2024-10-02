@@ -248,6 +248,27 @@ public class VirtualCubeTest extends BatchTestCase {
             + "Row #0: 266,773\n");
     }
 
+    public void testSqlTupleReader() {
+        final TestContext tc = createContextWithNonDefaultAllMember();
+        tc.assertQueryReturns(
+          "select NON EMPTY {[Measures].[Store Sales], [Measures].[Warehouse Sales]} ON COLUMNS,\n"
+            + "  NON EMPTY Hierarchize(Union(Crossjoin({[Customers].[All Customers]}, {[Warehouse].[All Warehouses]}), Crossjoin({[Customers].[All Customers]}, [Warehouse].[All Warehouses].Children))) ON ROWS\n"
+            + "from [Warehouse and Sales]",
+          "Axis #0:\n"
+            + "{}\n"
+            + "Axis #1:\n"
+            + "{[Measures].[Store Sales]}\n"
+            + "{[Measures].[Warehouse Sales]}\n"
+            + "Axis #2:\n"
+            + "{[Customers].[All Customers], [Warehouse].[All Warehouses]}\n"
+            + "{[Customers].[All Customers], [Warehouse].[USA]}\n"
+            + "Row #0: 565,238.13\n"
+            + "Row #0: 196,770.888\n"
+            + "Row #1: \n"
+            + "Row #1: 196,770.888\n"
+        );
+    }
+
     /**
      * Creates a TestContext containing a cube
      * "Warehouse (Default USA) and Sales".
