@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-mondrian-parent-pom</artifactId>
-    <version>9.4.0.0-343-1-SNAPSHOT</version>
+    <version>9.4.0.0-343-1</version>
   </parent>
   <artifactId>mondrian</artifactId>
-  <version>9.4.0.0-343-1-SNAPSHOT</version>
+  <version>9.4.0.0-343-1</version>
   <name>Pentaho Community Edition Project: ${project.artifactId}</name>
   <description>Mondrian OLAP Engine</description>
   <url>http://mondrian.pentaho.com</url>
@@ -197,7 +196,7 @@
                 <property name="generated.resources.dir" value="${project.basedir}/src/generated/resources" />
                 <property name="relative.generated.java.dir" value="src/generated/java" />
                 <property name="classes.dir" value="${project.build.outputDirectory}" />
-                <property name="build.compiler" value="extJavac"/>
+                <property name="build.compiler" value="extJavac" />
                 <mkdir dir="${project.build.outputDirectory}" />
                 <mkdir dir="${generated.java.dir}/mondrian/olap" />
                 <mkdir dir="${generated.java.dir}/mondrian/rolap/aggmatcher" />
