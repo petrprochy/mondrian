@@ -22,9 +22,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git@github.com:petrprochy/mondrian.git</connection>
-    <developerConnection>scm:git:git@github.com:petrprochy/mondrian.git</developerConnection>
-    <url>scm:git:git@github.com:petrprochy/mondrian.git</url>
+    <connection>scm:git:https://github.com/petrprochy/mondrian.git</connection>
+    <developerConnection>scm:git:https://github.com/petrprochy/mondrian.git</developerConnection>
+    <url>https://github.com/petrprochy/mondrian.git</url>
   </scm>
   <properties>
     <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
