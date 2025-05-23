@@ -293,10 +293,7 @@ public abstract class DefaultXmlaServlet extends XmlaServlet {
 
                 // Make sure Element has mustUnderstand=1 attribute.
                 Attr attr = e.getAttributeNode(SOAP_MUST_UNDERSTAND_ATTR);
-                boolean mustUnderstandValue =
-                    attr != null
-                    && attr.getValue() != null
-                    && attr.getValue().equals("1");
+                boolean mustUnderstandValue = attr == null || "1".equals(attr.getValue());
 
                 if (!mustUnderstandValue) {
                     continue;
