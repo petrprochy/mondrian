@@ -1701,8 +1701,11 @@ public enum RowsetDefinition {
                 Row row = new Row();
                 row.set(SchemaName.name, rowsetDefinition.name());
 
-                // TODO: If we have a SchemaGuid output here
-                //row.set(SchemaGuid.name, "");
+                try {
+                    final SchemaGUID value = SchemaGUID.valueOf(rowsetDefinition.name());
+                    row.set(SchemaGuid.name, value.guid);
+                } catch (IllegalArgumentException ignored) {
+                }
 
                 row.set(Restrictions.name, getRestrictions(rowsetDefinition));
 

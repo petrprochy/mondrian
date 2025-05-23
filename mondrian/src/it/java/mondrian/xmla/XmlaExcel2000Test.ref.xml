@@ -143,6 +143,7 @@
                     </xsd:schema>
                     <row>
                         <SchemaName>DBSCHEMA_CATALOGS</SchemaName>
+                        <SchemaGuid>C8B52211-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -151,6 +152,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_COLUMNS</SchemaName>
+                        <SchemaGuid>C8B52214-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>TABLE_CATALOG</Name>
                             <Type>xsd:string</Type>
@@ -171,6 +173,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_PROVIDER_TYPES</SchemaName>
+                        <SchemaGuid>C8B5222C-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>DATA_TYPE</Name>
                             <Type>xsd:unsignedShort</Type>
@@ -183,6 +186,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_SCHEMATA</SchemaName>
+                        <SchemaGuid>C8B52225-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -199,6 +203,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_TABLES</SchemaName>
+                        <SchemaGuid>C8B52229-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>TABLE_CATALOG</Name>
                             <Type>xsd:string</Type>
@@ -219,6 +224,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_TABLES_INFO</SchemaName>
+                        <SchemaGuid>C8B522E0-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>TABLE_CATALOG</Name>
                             <Type>xsd:string</Type>
@@ -239,6 +245,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_DATASOURCES</SchemaName>
+                        <SchemaGuid>06C03D41-F66D-49F3-B1B8-987F7AF4CF18</SchemaGuid>
                         <Restrictions>
                             <Name>DataSourceName</Name>
                             <Type>xsd:string</Type>
@@ -263,6 +270,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_ENUMERATORS</SchemaName>
+                        <SchemaGuid>55A9E78B-ACCB-45B4-95A6-94C5065617A7</SchemaGuid>
                         <Restrictions>
                             <Name>EnumName</Name>
                             <Type>xsd:string</Type>
@@ -271,6 +279,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_KEYWORDS</SchemaName>
+                        <SchemaGuid>1426C443-4CDD-4A40-8F45-572FAB9BBAA1</SchemaGuid>
                         <Restrictions>
                             <Name>Keyword</Name>
                             <Type>xsd:string</Type>
@@ -279,6 +288,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_LITERALS</SchemaName>
+                        <SchemaGuid>C3EF5ECB-0A07-4665-A140-B075722DBDC2</SchemaGuid>
                         <Restrictions>
                             <Name>LiteralName</Name>
                             <Type>xsd:string</Type>
@@ -287,6 +297,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_PROPERTIES</SchemaName>
+                        <SchemaGuid>4B40ADFB-8B09-4758-97BB-636E8AE97BCF</SchemaGuid>
                         <Restrictions>
                             <Name>PropertyName</Name>
                             <Type>xsd:string</Type>
@@ -295,6 +306,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_SCHEMA_ROWSETS</SchemaName>
+                        <SchemaGuid>EEA0302B-7922-4992-8991-0E605D0E5593</SchemaGuid>
                         <Restrictions>
                             <Name>SchemaName</Name>
                             <Type>xsd:string</Type>
@@ -303,6 +315,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_ACTIONS</SchemaName>
+                        <SchemaGuid>A07CCD08-8148-11D0-87BB-00C04FC33942</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -331,6 +344,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_CUBES</SchemaName>
+                        <SchemaGuid>C8B522D8-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -351,6 +365,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_DIMENSIONS</SchemaName>
+                        <SchemaGuid>C8B522D9-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -375,6 +390,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_FUNCTIONS</SchemaName>
+                        <SchemaGuid>A07CCD07-8148-11D0-87BB-00C04FC33942</SchemaGuid>
                         <Restrictions>
                             <Name>FUNCTION_NAME</Name>
                             <Type>xsd:string</Type>
@@ -395,6 +411,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_HIERARCHIES</SchemaName>
+                        <SchemaGuid>C8B522DA-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -423,6 +440,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_LEVELS</SchemaName>
+                        <SchemaGuid>C8B522DB-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -455,6 +473,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_MEASURES</SchemaName>
+                        <SchemaGuid>C8B522DC-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -479,6 +498,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_MEMBERS</SchemaName>
+                        <SchemaGuid>C8B522DE-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -531,6 +551,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_PROPERTIES</SchemaName>
+                        <SchemaGuid>C8B522DD-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -575,6 +596,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_SETS</SchemaName>
+                        <SchemaGuid>A07CCD0B-8148-11D0-87BB-00C04FC33942</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -2802,6 +2824,7 @@
                     </xsd:schema>
                     <row>
                         <SchemaName>DBSCHEMA_CATALOGS</SchemaName>
+                        <SchemaGuid>C8B52211-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -2810,6 +2833,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_COLUMNS</SchemaName>
+                        <SchemaGuid>C8B52214-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>TABLE_CATALOG</Name>
                             <Type>xsd:string</Type>
@@ -2830,6 +2854,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_PROVIDER_TYPES</SchemaName>
+                        <SchemaGuid>C8B5222C-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>DATA_TYPE</Name>
                             <Type>xsd:unsignedShort</Type>
@@ -2842,6 +2867,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_SCHEMATA</SchemaName>
+                        <SchemaGuid>C8B52225-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -2858,6 +2884,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_TABLES</SchemaName>
+                        <SchemaGuid>C8B52229-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>TABLE_CATALOG</Name>
                             <Type>xsd:string</Type>
@@ -2878,6 +2905,7 @@
                     </row>
                     <row>
                         <SchemaName>DBSCHEMA_TABLES_INFO</SchemaName>
+                        <SchemaGuid>C8B522E0-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>TABLE_CATALOG</Name>
                             <Type>xsd:string</Type>
@@ -2898,6 +2926,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_DATASOURCES</SchemaName>
+                        <SchemaGuid>06C03D41-F66D-49F3-B1B8-987F7AF4CF18</SchemaGuid>
                         <Restrictions>
                             <Name>DataSourceName</Name>
                             <Type>xsd:string</Type>
@@ -2922,6 +2951,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_ENUMERATORS</SchemaName>
+                        <SchemaGuid>55A9E78B-ACCB-45B4-95A6-94C5065617A7</SchemaGuid>
                         <Restrictions>
                             <Name>EnumName</Name>
                             <Type>xsd:string</Type>
@@ -2930,6 +2960,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_KEYWORDS</SchemaName>
+                        <SchemaGuid>1426C443-4CDD-4A40-8F45-572FAB9BBAA1</SchemaGuid>
                         <Restrictions>
                             <Name>Keyword</Name>
                             <Type>xsd:string</Type>
@@ -2938,6 +2969,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_LITERALS</SchemaName>
+                        <SchemaGuid>C3EF5ECB-0A07-4665-A140-B075722DBDC2</SchemaGuid>
                         <Restrictions>
                             <Name>LiteralName</Name>
                             <Type>xsd:string</Type>
@@ -2946,6 +2978,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_PROPERTIES</SchemaName>
+                        <SchemaGuid>4B40ADFB-8B09-4758-97BB-636E8AE97BCF</SchemaGuid>
                         <Restrictions>
                             <Name>PropertyName</Name>
                             <Type>xsd:string</Type>
@@ -2954,6 +2987,7 @@
                     </row>
                     <row>
                         <SchemaName>DISCOVER_SCHEMA_ROWSETS</SchemaName>
+                        <SchemaGuid>EEA0302B-7922-4992-8991-0E605D0E5593</SchemaGuid>
                         <Restrictions>
                             <Name>SchemaName</Name>
                             <Type>xsd:string</Type>
@@ -2962,6 +2996,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_ACTIONS</SchemaName>
+                        <SchemaGuid>A07CCD08-8148-11D0-87BB-00C04FC33942</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -2990,6 +3025,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_CUBES</SchemaName>
+                        <SchemaGuid>C8B522D8-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3010,6 +3046,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_DIMENSIONS</SchemaName>
+                        <SchemaGuid>C8B522D9-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3034,6 +3071,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_FUNCTIONS</SchemaName>
+                        <SchemaGuid>A07CCD07-8148-11D0-87BB-00C04FC33942</SchemaGuid>
                         <Restrictions>
                             <Name>FUNCTION_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3054,6 +3092,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_HIERARCHIES</SchemaName>
+                        <SchemaGuid>C8B522DA-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3082,6 +3121,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_LEVELS</SchemaName>
+                        <SchemaGuid>C8B522DB-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3114,6 +3154,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_MEASURES</SchemaName>
+                        <SchemaGuid>C8B522DC-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3138,6 +3179,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_MEMBERS</SchemaName>
+                        <SchemaGuid>C8B522DE-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3190,6 +3232,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_PROPERTIES</SchemaName>
+                        <SchemaGuid>C8B522DD-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
@@ -3234,6 +3277,7 @@
                     </row>
                     <row>
                         <SchemaName>MDSCHEMA_SETS</SchemaName>
+                        <SchemaGuid>A07CCD0B-8148-11D0-87BB-00C04FC33942</SchemaGuid>
                         <Restrictions>
                             <Name>CATALOG_NAME</Name>
                             <Type>xsd:string</Type>
