@@ -794,12 +794,6 @@ public class XmlaHandler {
             case SchemaData:
                 if (result != null) {
                     result.metadata(writer);
-                } else {
-                    if (rowset) {
-                        writer.verbatim(EMPTY_ROW_SET_XML_SCHEMA);
-                    } else {
-                        writer.verbatim(EMPTY_MD_DATA_SET_XML_SCHEMA);
-                    }
                 }
                 break;
             }

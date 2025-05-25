@@ -878,11 +878,7 @@
     <SOAP-ENV:Body>
         <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
             <cxmla:return>
-                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <xsd:element name="root"/>
-                    </xsd:schema>
-                </root>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </cxmla:return>
         </cxmla:ExecuteResponse>
     </SOAP-ENV:Body>
@@ -926,11 +922,7 @@
     <SOAP-ENV:Body>
         <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
             <cxmla:return>
-                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <xsd:element name="root"/>
-                    </xsd:schema>
-                </root>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </cxmla:return>
         </cxmla:ExecuteResponse>
     </SOAP-ENV:Body>
@@ -2659,11 +2651,7 @@
     <SOAP-ENV:Body>
         <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
             <cxmla:return>
-                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <xsd:element name="root"/>
-                    </xsd:schema>
-                </root>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </cxmla:return>
         </cxmla:ExecuteResponse>
     </SOAP-ENV:Body>
@@ -3549,11 +3537,7 @@
     <SOAP-ENV:Body>
         <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
             <cxmla:return>
-                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                        <xsd:element name="root"/>
-                    </xsd:schema>
-                </root>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
             </cxmla:return>
         </cxmla:ExecuteResponse>
     </SOAP-ENV:Body>
