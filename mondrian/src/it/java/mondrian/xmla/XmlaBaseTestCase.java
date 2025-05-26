@@ -193,7 +193,13 @@ System.out.println("requestText=" + requestText);
         byte[] bytes = XmlaSupport.processSoapXmla(reqDoc, servlet);
 
         String expectedStr = generateExpectedString(props);
-        Document expectedDoc = XmlUtil.parseString(expectedStr);
+        Document expectedDoc = null;
+        try {
+            expectedDoc = XmlUtil.parseString(expectedStr);
+        } catch (Exception e) {
+            validate(bytes, null, TestContext.instance(), true, true);
+            XMLAssert.fail("Can not parse response: " + e);
+        }
         validate(bytes, expectedDoc, TestContext.instance(), true, true);
     }
 

@@ -182,6 +182,7 @@ import mondrian.xmla.XmlaDimensionPropertiesTest;
 import mondrian.xmla.XmlaErrorTest;
 import mondrian.xmla.XmlaExcel2000Test;
 import mondrian.xmla.XmlaExcel2007Test;
+import mondrian.xmla.XmlaExcel2013Test;
 import mondrian.xmla.XmlaExcelXPTest;
 import mondrian.xmla.XmlaMetaDataConstraintsTest;
 import mondrian.xmla.XmlaTabularTest;
@@ -355,6 +356,7 @@ public class Main extends TestSuite {
       addTest( suite, XmlaExcel2000Test.class );
       addTest( suite, XmlaExcelXPTest.class );
       addTest( suite, XmlaExcel2007Test.class );
+      addTest( suite, XmlaExcel2013Test.class );
       addTest( suite, XmlaCognosTest.class );
       addTest( suite, XmlaTabularTest.class );
       addTest( suite, XmlaTests.class );

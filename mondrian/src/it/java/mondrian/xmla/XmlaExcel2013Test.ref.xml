@@ -1,0 +1,2908 @@
+<Root>
+    <TestCase name="test000PropertyDbpropMsmdSubqueries">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Version xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100" Sequence="400"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>DbpropMsmdSubqueries</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList/>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+          <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <PropertyName>DbpropMsmdSubqueries</PropertyName>
+                        <PropertyDescription>An enumeration value that determines the behavior of subqueries.</PropertyDescription>
+                        <PropertyType>Integer</PropertyType>
+                        <PropertyAccessType>ReadWrite</PropertyAccessType>
+                        <IsRequired>false</IsRequired>
+                        <Value>1</Value>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test001PropertyDbpropMsmdOptimizeResponse">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Version xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100" Sequence="400"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>DbpropMsmdOptimizeResponse</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList/>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test002PropertyDbpropMsmdActivityID">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Version xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100" Sequence="400"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>DbpropMsmdActivityID</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList/>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception">
+                    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sql="urn:schemas-microsoft-com:xml-sql" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" elementFormDefault="qualified">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="row" type="row" minOccurs="0" maxOccurs="unbounded"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element sql:field="PropertyName" name="PropertyName" type="xsd:string"/>
+                                <xsd:element sql:field="PropertyDescription" name="PropertyDescription" type="xsd:string"/>
+                                <xsd:element sql:field="PropertyType" name="PropertyType" type="xsd:string"/>
+                                <xsd:element sql:field="PropertyAccessType" name="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element sql:field="IsRequired" name="IsRequired" type="xsd:boolean"/>
+                                <xsd:element sql:field="Value" name="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test003BeginSessionToken">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <BeginGetSessionToken xmlns:msxmla="http://schemas.microsoft.com/analysisservices/2003/xmla"/>
+        <Version xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100" Sequence="400"/>
+    </soap:Header>
+    <soap:Body>
+        <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <Command>
+                <Statement xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+            </Command>
+            <Properties>
+                <PropertyList>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Execute>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </cxmla:return>
+        </cxmla:ExecuteResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test004BeginSession">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <BeginSession xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+        <Version xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100" Sequence="400"/>
+    </soap:Header>
+    <soap:Body>
+        <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <Command>
+                <Statement xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+            </Command>
+            <Properties>
+                <PropertyList>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Execute>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            </cxmla:return>
+        </cxmla:ExecuteResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test005PropertyCatalog">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>Catalog</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <PropertyName>Catalog</PropertyName>
+                        <PropertyDescription>When establishing a session with an Analysis Services instance to send an XMLA command, this property is equivalent to the OLE DB property, DBPROP_INIT_CATALOG. When you set this property during a session to change the current database for the session, this property is equivalent to the OLE DB property, DBPROP_CURRENTCATALOG. The default value for this property is an empty string.</PropertyDescription>
+                        <PropertyType>string</PropertyType>
+                        <PropertyAccessType>ReadWrite</PropertyAccessType>
+                        <IsRequired>false</IsRequired>
+                        <Value>FoodMart</Value>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test006PropertyServerName">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>ServerName</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+            ]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test007PropertyProviderVersion">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>ProviderVersion</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <PropertyName>ProviderVersion</PropertyName>
+                        <PropertyDescription>The version of the Mondrian XMLA Provider</PropertyDescription>
+                        <PropertyType>string</PropertyType>
+                        <PropertyAccessType>Read</PropertyAccessType>
+                        <IsRequired>false</IsRequired>
+                        <Value>${mondrianVersion}</Value>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test008PropertyMdpropMdxDdlExtensions">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>MdpropMdxDdlExtensions</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test009FoodMartPropertyMdpropMdxSubqueries">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>MdpropMdxSubqueries</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <PropertyName>MdpropMdxSubqueries</PropertyName>
+                        <PropertyDescription>A bitmask that indicates the level of support for subqueries in MDX.</PropertyDescription>
+                        <PropertyType>Integer</PropertyType>
+                        <PropertyAccessType>Read</PropertyAccessType>
+                        <IsRequired>false</IsRequired>
+                        <Value/>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test010FoodMartPropertyMdpropMdxDrillFunctions">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>MdpropMdxDrillFunctions</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test011FoodMartPropertyMdpropMdxNamedSets">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_PROPERTIES</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <PropertyName>MdpropMdxNamedSets</PropertyName>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="PropertyName" sql:field="PropertyName" type="xsd:string"/>
+                                <xsd:element name="PropertyDescription" sql:field="PropertyDescription" type="xsd:string"/>
+                                <xsd:element name="PropertyType" sql:field="PropertyType" type="xsd:string"/>
+                                <xsd:element name="PropertyAccessType" sql:field="PropertyAccessType" type="xsd:string"/>
+                                <xsd:element name="IsRequired" sql:field="IsRequired" type="xsd:boolean"/>
+                                <xsd:element name="Value" sql:field="Value" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test012FoodMartDISCOVER_SCHEMA_ROWSETS">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DISCOVER_SCHEMA_ROWSETS</RequestType>
+            <Restrictions>
+                <RestrictionList/>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="SchemaName" sql:field="SchemaName" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="SchemaGuid" sql:field="SchemaGuid" type="uuid"/>
+                                <xsd:element maxOccurs="unbounded" minOccurs="0" name="Restrictions" sql:field="Restrictions">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="Name" sql:field="Name" type="xsd:string"/>
+                                            <xsd:element name="Type" sql:field="Type" type="xsd:string"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="Description" sql:field="Description" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <SchemaName>DBSCHEMA_CATALOGS</SchemaName>
+                        <SchemaGuid>C8B52211-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Identifies the physical attributes associated with catalogs accessible from the provider.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>DBSCHEMA_COLUMNS</SchemaName>
+                        <SchemaGuid>C8B52214-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>TABLE_CATALOG</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_SCHEMA</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>COLUMN_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>DBSCHEMA_PROVIDER_TYPES</SchemaName>
+                        <SchemaGuid>C8B5222C-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>DATA_TYPE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>BEST_MATCH</Name>
+                            <Type>xsd:boolean</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>DBSCHEMA_SCHEMATA</SchemaName>
+                        <SchemaGuid>C8B52225-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_OWNER</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>DBSCHEMA_TABLES</SchemaName>
+                        <SchemaGuid>C8B52229-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>TABLE_CATALOG</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_SCHEMA</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_TYPE</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>DBSCHEMA_TABLES_INFO</SchemaName>
+                        <SchemaGuid>C8B522E0-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>TABLE_CATALOG</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_SCHEMA</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TABLE_TYPE</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>DISCOVER_DATASOURCES</SchemaName>
+                        <SchemaGuid>06C03D41-F66D-49F3-B1B8-987F7AF4CF18</SchemaGuid>
+                        <Restrictions>
+                            <Name>DataSourceName</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>URL</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>ProviderName</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>ProviderType</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>AuthenticationMode</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Returns a list of XML for Analysis data sources available on the server or Web Service.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>DISCOVER_ENUMERATORS</SchemaName>
+                        <SchemaGuid>55A9E78B-ACCB-45B4-95A6-94C5065617A7</SchemaGuid>
+                        <Restrictions>
+                            <Name>EnumName</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Returns a list of names, data types, and enumeration values for enumerators supported by the provider of a specific data source.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>DISCOVER_KEYWORDS</SchemaName>
+                        <SchemaGuid>1426C443-4CDD-4A40-8F45-572FAB9BBAA1</SchemaGuid>
+                        <Restrictions>
+                            <Name>Keyword</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Returns an XML list of keywords reserved by the provider.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>DISCOVER_LITERALS</SchemaName>
+                        <SchemaGuid>C3EF5ECB-0A07-4665-A140-B075722DBDC2</SchemaGuid>
+                        <Restrictions>
+                            <Name>LiteralName</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Returns information about literals supported by the provider.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>DISCOVER_PROPERTIES</SchemaName>
+                        <SchemaGuid>4B40ADFB-8B09-4758-97BB-636E8AE97BCF</SchemaGuid>
+                        <Restrictions>
+                            <Name>PropertyName</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Returns a list of information and values about the requested properties that are supported by the specified data source provider.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>DISCOVER_SCHEMA_ROWSETS</SchemaName>
+                        <SchemaGuid>EEA0302B-7922-4992-8991-0E605D0E5593</SchemaGuid>
+                        <Restrictions>
+                            <Name>SchemaName</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description>Returns the names, values, and other information of all supported RequestType enumeration values.</Description>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_ACTIONS</SchemaName>
+                        <SchemaGuid>A07CCD08-8148-11D0-87BB-00C04FC33942</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>ACTION_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>COORDINATE</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>COORDINATE_TYPE</Name>
+                            <Type>xsd:int</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_CUBES</SchemaName>
+                        <SchemaGuid>C8B522D8-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_TYPE</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_DIMENSIONS</SchemaName>
+                        <SchemaGuid>C8B522D9-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>DIMENSION_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>DIMENSION_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_FUNCTIONS</SchemaName>
+                        <SchemaGuid>A07CCD07-8148-11D0-87BB-00C04FC33942</SchemaGuid>
+                        <Restrictions>
+                            <Name>FUNCTION_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>ORIGIN</Name>
+                            <Type>xsd:int</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>INTERFACE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LIBRARY_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_HIERARCHIES</SchemaName>
+                        <SchemaGuid>C8B522DA-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>DIMENSION_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>HIERARCHY_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>HIERARCHY_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>HIERARCHY_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_LEVELS</SchemaName>
+                        <SchemaGuid>C8B522DB-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>DIMENSION_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>HIERARCHY_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_MEASURES</SchemaName>
+                        <SchemaGuid>C8B522DC-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASURE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASURE_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASURE_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_MEMBERS</SchemaName>
+                        <SchemaGuid>C8B522DE-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>DIMENSION_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>HIERARCHY_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_NUMBER</Name>
+                            <Type>xsd:unsignedInt</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEMBER_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEMBER_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEMBER_TYPE</Name>
+                            <Type>xsd:int</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEMBER_CAPTION</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>TREE_OP</Name>
+                            <Type>xsd:int</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_PROPERTIES</SchemaName>
+                        <SchemaGuid>C8B522DD-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>DIMENSION_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>HIERARCHY_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEMBER_UNIQUE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_TYPE</Name>
+                            <Type>xsd:short</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_CONTENT_TYPE</Name>
+                            <Type>xsd:short</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
+                        <SchemaName>MDSCHEMA_SETS</SchemaName>
+                        <SchemaGuid>A07CCD0B-8148-11D0-87BB-00C04FC33942</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SET_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCOPE</Name>
+                            <Type>xsd:int</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test013FoodMartDBSCHEMA_CATALOGS">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DBSCHEMA_CATALOGS</RequestType>
+            <Restrictions>
+                <RestrictionList/>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="CATALOG_NAME" sql:field="CATALOG_NAME" type="xsd:string"/>
+                                <xsd:element name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element name="ROLES" sql:field="ROLES" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="DATE_MODIFIED" sql:field="DATE_MODIFIED" type="xsd:dateTime"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <DESCRIPTION>No description available</DESCRIPTION>
+                        <ROLES>Administrator,California manager,No HR Cube</ROLES>
+                        <DATE_MODIFIED>2025-05-16T23:08:42</DATE_MODIFIED>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test014FoodMartMDSCHEMA_CUBES">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>MDSCHEMA_CUBES</RequestType>
+            <Restrictions>
+                <RestrictionList/>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="CATALOG_NAME" sql:field="CATALOG_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="SCHEMA_NAME" sql:field="SCHEMA_NAME" type="xsd:string"/>
+                                <xsd:element name="CUBE_NAME" sql:field="CUBE_NAME" type="xsd:string"/>
+                                <xsd:element name="CUBE_TYPE" sql:field="CUBE_TYPE" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="CUBE_GUID" sql:field="CUBE_GUID" type="uuid"/>
+                                <xsd:element minOccurs="0" name="CREATED_ON" sql:field="CREATED_ON" type="xsd:dateTime"/>
+                                <xsd:element minOccurs="0" name="LAST_SCHEMA_UPDATE" sql:field="LAST_SCHEMA_UPDATE" type="xsd:dateTime"/>
+                                <xsd:element minOccurs="0" name="SCHEMA_UPDATED_BY" sql:field="SCHEMA_UPDATED_BY" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="LAST_DATA_UPDATE" sql:field="LAST_DATA_UPDATE" type="xsd:dateTime"/>
+                                <xsd:element minOccurs="0" name="DATA_UPDATED_BY" sql:field="DATA_UPDATED_BY" type="xsd:string"/>
+                                <xsd:element name="IS_DRILLTHROUGH_ENABLED" sql:field="IS_DRILLTHROUGH_ENABLED" type="xsd:boolean"/>
+                                <xsd:element name="IS_WRITE_ENABLED" sql:field="IS_WRITE_ENABLED" type="xsd:boolean"/>
+                                <xsd:element name="IS_LINKABLE" sql:field="IS_LINKABLE" type="xsd:boolean"/>
+                                <xsd:element name="IS_SQL_ENABLED" sql:field="IS_SQL_ENABLED" type="xsd:boolean"/>
+                                <xsd:element minOccurs="0" name="CUBE_CAPTION" sql:field="CUBE_CAPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="DIMENSIONS" sql:field="DIMENSIONS"/>
+                                <xsd:element minOccurs="0" name="SETS" sql:field="SETS"/>
+                                <xsd:element minOccurs="0" name="MEASURES" sql:field="MEASURES"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>HR</CUBE_NAME>
+                        <CUBE_TYPE>CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>HR</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - HR Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Sales</CUBE_NAME>
+                        <CUBE_TYPE>CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>Sales</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - Sales Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Sales 2</CUBE_NAME>
+                        <CUBE_TYPE>CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>Sales 2</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - Sales 2 Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Sales Ragged</CUBE_NAME>
+                        <CUBE_TYPE>CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>Sales Ragged</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - Sales Ragged Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Store</CUBE_NAME>
+                        <CUBE_TYPE>CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>Store</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - Store Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Warehouse</CUBE_NAME>
+                        <CUBE_TYPE>CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>Warehouse</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - Warehouse Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Warehouse and Sales</CUBE_NAME>
+                        <CUBE_TYPE>VIRTUAL CUBE</CUBE_TYPE>
+                        <LAST_SCHEMA_UPDATE>2025-05-25T20:45:20</LAST_SCHEMA_UPDATE>
+                        <LAST_DATA_UPDATE>2025-05-25T20:46:54</LAST_DATA_UPDATE>
+                        <IS_DRILLTHROUGH_ENABLED>true</IS_DRILLTHROUGH_ENABLED>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <IS_LINKABLE>false</IS_LINKABLE>
+                        <IS_SQL_ENABLED>false</IS_SQL_ENABLED>
+                        <CUBE_CAPTION>Warehouse and Sales</CUBE_CAPTION>
+                        <DESCRIPTION>FoodMart Schema - Warehouse and Sales Cube</DESCRIPTION>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test015FoodMartDBSCHEMA_TABLES">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>DBSCHEMA_TABLES</RequestType>
+            <Restrictions>
+                <RestrictionList/>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <LocaleIdentifier>1033</LocaleIdentifier>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element name="TABLE_CATALOG" sql:field="TABLE_CATALOG" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="TABLE_SCHEMA" sql:field="TABLE_SCHEMA" type="xsd:string"/>
+                                <xsd:element name="TABLE_NAME" sql:field="TABLE_NAME" type="xsd:string"/>
+                                <xsd:element name="TABLE_TYPE" sql:field="TABLE_TYPE" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="TABLE_GUID" sql:field="TABLE_GUID" type="uuid"/>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="TABLE_PROPID" sql:field="TABLE_PROPID" type="xsd:unsignedInt"/>
+                                <xsd:element minOccurs="0" name="DATE_CREATED" sql:field="DATE_CREATED" type="xsd:dateTime"/>
+                                <xsd:element minOccurs="0" name="DATE_MODIFIED" sql:field="DATE_MODIFIED" type="xsd:dateTime"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Department:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Department Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Department:Department Description</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Department Hierarchy - Department Description Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Employees:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Employees Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Employees:Employee Id</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Employees Hierarchy - Employee Id Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Pay Type:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Pay Type Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Pay Type:Pay Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Pay Type Hierarchy - Pay Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Position:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Position Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Position:Management Role</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Position Hierarchy - Management Role Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Position:Position Title</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Position Hierarchy - Position Title Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store Type:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Type Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store Type:Store Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Type Hierarchy - Store Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store:Store City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store:Store Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store:Store Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Store:Store State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Time:Month</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Time:Quarter</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR:Time:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Gender:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Gender Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Gender:Gender</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Gender Hierarchy - Gender Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:Brand Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - Brand Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:Product Category</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - Product Category Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:Product Department</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - Product Department Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:Product Family</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - Product Family Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:Product Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - Product Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Product:Product Subcategory</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Product Hierarchy - Product Subcategory Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time.Weekly:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time.Weekly Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time.Weekly:Day</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time.Weekly Hierarchy - Day Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time.Weekly:Week</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time.Weekly Hierarchy - Week Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time.Weekly:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time.Weekly Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time:Month</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time:Quarter</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2:Time:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Customers:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Customers Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Customers:City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Customers Hierarchy - City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Customers:Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Customers Hierarchy - Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Customers:Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Customers Hierarchy - Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Customers:State Province</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Customers Hierarchy - State Province Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Education Level:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Education Level Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Education Level:Education Level</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Education Level Hierarchy - Education Level Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Gender:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Gender Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Gender:Gender</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Gender Hierarchy - Gender Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Geography:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Geography Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Geography:City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Geography Hierarchy - City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Geography:Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Geography Hierarchy - Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Geography:State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Geography Hierarchy - State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Marital Status:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Marital Status Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Marital Status:Marital Status</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Marital Status Hierarchy - Marital Status Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:Brand Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - Brand Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:Product Category</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - Product Category Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:Product Department</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - Product Department Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:Product Family</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - Product Family Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:Product Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - Product Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Product:Product Subcategory</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Product Hierarchy - Product Subcategory Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Promotion Media:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Promotion Media Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Promotion Media:Media Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Promotion Media Hierarchy - Media Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Promotions:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Promotions Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Promotions:Promotion Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Promotions Hierarchy - Promotion Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store Size in SQFT:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Size in SQFT Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store Size in SQFT:Store Sqft</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Size in SQFT Hierarchy - Store Sqft Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store Type:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Type Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store Type:Store Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Type Hierarchy - Store Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store:Store City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store:Store Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store:Store Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Store:Store State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time.Weekly:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time.Weekly Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time.Weekly:Day</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time.Weekly Hierarchy - Day Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time.Weekly:Week</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time.Weekly Hierarchy - Week Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time.Weekly:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time.Weekly Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time:Month</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time:Quarter</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Time:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Yearly Income:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Yearly Income Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged:Yearly Income:Yearly Income</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube - Yearly Income Hierarchy - Yearly Income Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Customers:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Customers Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Customers:City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Customers Hierarchy - City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Customers:Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Customers Hierarchy - Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Customers:Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Customers Hierarchy - Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Customers:State Province</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Customers Hierarchy - State Province Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Education Level:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Education Level Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Education Level:Education Level</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Education Level Hierarchy - Education Level Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Gender:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Gender Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Gender:Gender</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Gender Hierarchy - Gender Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Marital Status:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Marital Status Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Marital Status:Marital Status</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Marital Status Hierarchy - Marital Status Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:Brand Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - Brand Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:Product Category</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - Product Category Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:Product Department</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - Product Department Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:Product Family</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - Product Family Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:Product Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - Product Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Product:Product Subcategory</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Product Hierarchy - Product Subcategory Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Promotion Media:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Promotion Media Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Promotion Media:Media Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Promotion Media Hierarchy - Media Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Promotions:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Promotions Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Promotions:Promotion Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Promotions Hierarchy - Promotion Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store Size in SQFT:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Size in SQFT Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store Size in SQFT:Store Sqft</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Size in SQFT Hierarchy - Store Sqft Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store Type:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Type Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store Type:Store Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Type Hierarchy - Store Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store:Store City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store:Store Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store:Store Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Store:Store State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time.Weekly:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time.Weekly Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time.Weekly:Day</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time.Weekly Hierarchy - Day Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time.Weekly:Week</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time.Weekly Hierarchy - Week Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time.Weekly:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time.Weekly Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time:Month</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time:Quarter</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Time:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Yearly Income:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Yearly Income Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales:Yearly Income:Yearly Income</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube - Yearly Income Hierarchy - Yearly Income Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Has coffee bar:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Has coffee bar Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Has coffee bar:Has coffee bar</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Has coffee bar Hierarchy - Has coffee bar Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store Type:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Type Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store Type:Store Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Type Hierarchy - Store Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store:Store City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store:Store Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store:Store Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store:Store:Store State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Customers:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Customers Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Customers:City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Customers Hierarchy - City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Customers:Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Customers Hierarchy - Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Customers:Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Customers Hierarchy - Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Customers:State Province</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Customers Hierarchy - State Province Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Education Level:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Education Level Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Education Level:Education Level</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Education Level Hierarchy - Education Level Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Gender:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Gender Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Gender:Gender</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Gender Hierarchy - Gender Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Marital Status:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Marital Status Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Marital Status:Marital Status</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Marital Status Hierarchy - Marital Status Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:Brand Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - Brand Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:Product Category</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - Product Category Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:Product Department</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - Product Department Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:Product Family</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - Product Family Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:Product Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - Product Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Product:Product Subcategory</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Product Hierarchy - Product Subcategory Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Promotion Media:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Promotion Media Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Promotion Media:Media Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Promotion Media Hierarchy - Media Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Promotions:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Promotions Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Promotions:Promotion Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Promotions Hierarchy - Promotion Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Store:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Store:Store City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Store:Store Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Store:Store Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Store:Store State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time.Weekly:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time.Weekly Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time.Weekly:Day</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time.Weekly Hierarchy - Day Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time.Weekly:Week</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time.Weekly Hierarchy - Week Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time.Weekly:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time.Weekly Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time:Month</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time:Quarter</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Time:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Warehouse:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Warehouse Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Warehouse:City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Warehouse Hierarchy - City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Warehouse:Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Warehouse Hierarchy - Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Warehouse:State Province</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Warehouse Hierarchy - State Province Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Warehouse:Warehouse Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Warehouse Hierarchy - Warehouse Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Yearly Income:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Yearly Income Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales:Yearly Income:Yearly Income</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube - Yearly Income Hierarchy - Yearly Income Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:Brand Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - Brand Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:Product Category</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - Product Category Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:Product Department</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - Product Department Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:Product Family</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - Product Family Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:Product Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - Product Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Product:Product Subcategory</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Product Hierarchy - Product Subcategory Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store Size in SQFT:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Size in SQFT Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store Size in SQFT:Store Sqft</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Size in SQFT Hierarchy - Store Sqft Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store Type:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Type Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store Type:Store Type</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Type Hierarchy - Store Type Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store:Store City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store:Store Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store:Store Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Store:Store State</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time.Weekly:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time.Weekly Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time.Weekly:Day</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time.Weekly Hierarchy - Day Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time.Weekly:Week</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time.Weekly Hierarchy - Week Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time.Weekly:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time.Weekly Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time:Month</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time:Quarter</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Time:Year</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Warehouse:(All)</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Warehouse Hierarchy - (All) Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Warehouse:City</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Warehouse Hierarchy - City Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Warehouse:Country</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Warehouse Hierarchy - Country Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Warehouse:State Province</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Warehouse Hierarchy - State Province Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse:Warehouse:Warehouse Name</TABLE_NAME>
+                        <TABLE_TYPE>SYSTEM TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube - Warehouse Hierarchy - Warehouse Name Level</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>HR</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - HR Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales 2</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales 2 Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Sales Ragged</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Sales Ragged Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Store</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Store Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse Cube</DESCRIPTION>
+                    </row>
+                    <row>
+                        <TABLE_CATALOG>FoodMart</TABLE_CATALOG>
+                        <TABLE_NAME>Warehouse and Sales</TABLE_NAME>
+                        <TABLE_TYPE>TABLE</TABLE_TYPE>
+                        <DESCRIPTION>FoodMart - Warehouse and Sales Cube</DESCRIPTION>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test016EndSession">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <EndSession xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Execute xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <Command>
+                <Statement xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+            </Command>
+            <Properties/>
+        </Execute>
+    </soap:Body>
+</soap:Envelope>
+]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:ExecuteResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:empty" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception"/>
+            </cxmla:return>
+        </cxmla:ExecuteResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+</Root>
