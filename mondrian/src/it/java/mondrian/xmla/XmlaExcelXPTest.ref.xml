@@ -837,7 +837,7 @@
                         <PropertyType>string</PropertyType>
                         <PropertyAccessType>ReadWrite</PropertyAccessType>
                         <IsRequired>false</IsRequired>
-                        <Value/>
+                        <Value>FoodMart</Value>
                     </row>
                 </root>
             </cxmla:return>
@@ -3742,7 +3742,7 @@
                         <PropertyType>string</PropertyType>
                         <PropertyAccessType>ReadWrite</PropertyAccessType>
                         <IsRequired>false</IsRequired>
-                        <Value/>
+                        <Value>FoodMart</Value>
                     </row>
                 </root>
             </cxmla:return>

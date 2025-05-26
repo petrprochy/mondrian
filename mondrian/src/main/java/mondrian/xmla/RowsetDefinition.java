@@ -1753,10 +1753,11 @@ public enum RowsetDefinition {
 
     static class DiscoverPropertiesRowset extends Rowset {
         private final Util.Functor1<Boolean, PropertyDefinition> propNameCond;
-
+        private final boolean needConnection;
         DiscoverPropertiesRowset(XmlaRequest request, XmlaHandler handler) {
             super(DISCOVER_PROPERTIES, request, handler);
             propNameCond = makeCondition(PROPDEF_NAME_GETTER, PropertyName);
+            needConnection = getRestrictionValues(PropertyName).contains(PropertyDefinition.Catalog.name());
         }
 
         private static final Column PropertyName =
@@ -1810,15 +1811,16 @@ public enum RowsetDefinition {
                 "The current value of the property.");
 
         protected boolean needConnection() {
-            return false;
+            return needConnection;
         }
 
         public void populateImpl(
             XmlaResponse response, OlapConnection connection, List<Row> rows)
-            throws XmlaException
+            throws XmlaException, SQLException
         {
+            final String c = request.getProperties().get(PropertyDefinition.Catalog.name());
             for (PropertyDefinition propertyDefinition
-                : PropertyDefinition.class.getEnumConstants())
+                : PropertyDefinition.values())
             {
                 if (!propNameCond.apply(propertyDefinition)) {
                     continue;
@@ -1830,7 +1832,11 @@ public enum RowsetDefinition {
                 row.set(PropertyType.name, propertyDefinition.type.getName());
                 row.set(PropertyAccessType.name, propertyDefinition.access);
                 row.set(IsRequired.name, false);
-                row.set(Value.name, propertyDefinition.value);
+                if (needConnection) {
+                    row.set(Value.name, connection.getOlapCatalogs().get(c == null ? connection.getSchema() : c).getName());
+                } else {
+                    row.set(Value.name, propertyDefinition.value);
+                }
                 addRow(row, rows);
             }
         }
