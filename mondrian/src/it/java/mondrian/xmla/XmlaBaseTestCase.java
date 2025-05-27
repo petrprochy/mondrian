@@ -151,7 +151,7 @@ System.out.println("requestText=" + requestText);
         }
 
         Document gotDoc = XmlUtil.parse(bytes);
-        gotDoc = replaceLastSchemaUpdateDate(gotDoc);
+        gotDoc = replaceDateModified(replaceLastSchemaUpdateDate(gotDoc));
         String gotStr = XmlUtil.toString(gotDoc, true);
         gotStr = maskVersion(gotStr);
         gotStr = testContext.upgradeActual(gotStr);
@@ -161,7 +161,7 @@ System.out.println("requestText=" + requestText);
             }
             return;
         }
-        expectedDoc = replaceLastSchemaUpdateDate(expectedDoc);
+        expectedDoc = replaceDateModified(replaceLastSchemaUpdateDate(expectedDoc));
         String expectedStr = XmlUtil.toString(expectedDoc, true);
         try {
             XMLAssert.assertXMLEqual(expectedStr, gotStr);
@@ -349,15 +349,22 @@ System.out.println("Got CONTINUE");
         return s;
     }
 
-    protected Document replaceLastSchemaUpdateDate(Document doc) {
-        NodeList elements =
-            doc.getElementsByTagName(LAST_SCHEMA_UPDATE_NODE_NAME);
+    public static Document replaceLastSchemaUpdateDate(Document doc) {
+        return replaceContent(doc, LAST_SCHEMA_UPDATE_NODE_NAME, LAST_SCHEMA_UPDATE_DATE);
+    }
+
+    public static Document replaceDateModified(Document doc) {
+        return replaceContent(doc, "DATE_MODIFIED", LAST_SCHEMA_UPDATE_DATE);
+    }
+
+    protected static Document replaceContent(Document doc, String element, String content) {
+        NodeList elements = doc.getElementsByTagName(element);
         for (int i = 0; i < elements.getLength(); i++) {
             Node node = elements.item(i);
-            node.getFirstChild().setNodeValue(
-                LAST_SCHEMA_UPDATE_DATE);
+            node.getFirstChild().setNodeValue(content);
         }
         return doc;
+
     }
 
     private String ignoreLastUpdateDate(String document) {

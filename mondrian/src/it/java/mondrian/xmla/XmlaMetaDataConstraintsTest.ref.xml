@@ -171,6 +171,7 @@
                         <CATALOG_NAME>${catalog.name}</CATALOG_NAME>
                         <DESCRIPTION>No description available</DESCRIPTION>
                         <ROLES>Administrator,California manager,No HR Cube</ROLES>
+                        <DATE_MODIFIED>xxxx-xx-xxTxx:xx:xx</DATE_MODIFIED>
                     </row>
                 </root>
             </cxmla:return>
@@ -190,6 +191,7 @@
     <RequestType>${request.type}</RequestType>
     <Restrictions>
       <RestrictionList>
+        <CATALOG_NAME>${catalog.name}</CATALOG_NAME>
       </RestrictionList>
     </Restrictions>
     <Properties>
@@ -240,6 +242,7 @@
                         <CATALOG_NAME>${catalog.name}</CATALOG_NAME>
                         <DESCRIPTION>No description available</DESCRIPTION>
                         <ROLES>Administrator,California manager,No HR Cube</ROLES>
+                        <DATE_MODIFIED>xxxx-xx-xxTxx:xx:xx</DATE_MODIFIED>
                     </row>
                 </root>
             </cxmla:return>

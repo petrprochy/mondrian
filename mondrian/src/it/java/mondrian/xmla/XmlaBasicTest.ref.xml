@@ -13831,6 +13831,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
                         <DESCRIPTION>No description available</DESCRIPTION>
                         <ROLES>Administrator,California manager,No HR Cube</ROLES>
+                        <DATE_MODIFIED>xxxx-xx-xxTxx:xx:xx</DATE_MODIFIED>
                     </row>
                 </root>
             </cxmla:return>

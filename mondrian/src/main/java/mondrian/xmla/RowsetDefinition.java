@@ -2168,8 +2168,7 @@ public enum RowsetDefinition {
             XmlaResponse response, OlapConnection connection, List<Row> rows)
             throws XmlaException, SQLException
         {
-            for (Catalog catalog
-                : catIter(connection, catNameCond(), catalogNameCond))
+            for (Catalog catalog : catIter(connection, catalogNameCond))
             {
                 for (Schema schema : catalog.getSchemas()) {
                     Row row = new Row();
@@ -2186,11 +2185,7 @@ public enum RowsetDefinition {
                     serialize(buf, roleNames);
                     row.set(Roles.name, buf.toString());
 
-                    // TODO: currently schema grammar does not support modify
-                    // date so we return just some date for now.
-                    if (false) {
-                        row.set(DateModified.name, dateModified);
-                    }
+                    row.set(DateModified.name, formatDate(getExtra(connection).getSchemaLoadDate(schema)));
                     addRow(row, rows);
                 }
             }
@@ -6407,6 +6402,10 @@ TODO: see above
                 return restrictionsMap;
             }
         };
+    }
+
+    private static String formatDate(Date date) {
+        return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(date);
     }
 
     /**

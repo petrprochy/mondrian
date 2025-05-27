@@ -39,6 +39,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import static mondrian.xmla.XmlaBaseTestCase.replaceDateModified;
+
 /**
  * Unit test for refined Mondrian's XML for Analysis API (package
  * {@link mondrian.xmla}).
@@ -127,8 +129,7 @@ public class XmlaTest extends TestCase {
         Element requestElem = XmlaUtil.text2Element(
             XmlaTestContext.xmlFromTemplate(
                 request, XmlaTestContext.ENV));
-        Element responseElem =
-            ignoreLastUpdateDate(executeRequest(requestElem));
+        Element responseElem = replaceDateModified(ignoreLastUpdateDate(executeRequest(requestElem)).getOwnerDocument()).getDocumentElement();
 
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
