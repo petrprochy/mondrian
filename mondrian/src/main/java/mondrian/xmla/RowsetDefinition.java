@@ -285,6 +285,7 @@ public enum RowsetDefinition {
             DiscoverLiteralsRowset.LiteralInvalidChars,
             DiscoverLiteralsRowset.LiteralInvalidStartingChars,
             DiscoverLiteralsRowset.LiteralMaxLength,
+            DiscoverLiteralsRowset.LiteralNameEnumValue,
         },
         null /* not sorted */)
     {
@@ -2137,21 +2138,24 @@ public enum RowsetDefinition {
             Column.OPTIONAL,
             "The maximum number of characters in the literal. If there is no "
             + "maximum or the maximum is unknown, the value is ?1.");
+        private static final Column LiteralNameEnumValue = new Column(
+            "LiteralNameEnumValue",
+            Type.Integer,
+            null,
+            Column.NOT_RESTRICTION,
+            Column.OPTIONAL,
+            "");
 
         public void populateImpl(
             XmlaResponse response, OlapConnection connection, List<Row> rows)
             throws XmlaException
         {
-            populate(
-                XmlaConstants.Literal.class,
-                rows,
-                new Comparator<XmlaConstants.Literal>() {
-                public int compare(
-                    XmlaConstants.Literal o1,
-                    XmlaConstants.Literal o2)
-                {
-                    return o1.name().compareTo(o2.name());
-                }
+            Stream.of(XmlaConstants.Literal.values()).forEach(l -> {
+                final Row row = new Row();
+                Stream.of(rowsetDefinition.columnDefinitions).forEach(c -> {
+                    row.set(c.name, c == LiteralNameEnumValue ? l.xmlaOrdinal() : c.get(l));
+                });
+                addRow(row, rows);
             });
         }
 
