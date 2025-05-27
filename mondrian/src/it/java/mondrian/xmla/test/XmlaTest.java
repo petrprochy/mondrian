@@ -39,7 +39,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import static mondrian.xmla.XmlaBaseTestCase.replaceDateModified;
+import static mondrian.xmla.XmlaBaseTestCase.*;
 
 /**
  * Unit test for refined Mondrian's XML for Analysis API (package
@@ -129,7 +129,7 @@ public class XmlaTest extends TestCase {
         Element requestElem = XmlaUtil.text2Element(
             XmlaTestContext.xmlFromTemplate(
                 request, XmlaTestContext.ENV));
-        Element responseElem = replaceDateModified(ignoreLastUpdateDate(executeRequest(requestElem)).getOwnerDocument()).getDocumentElement();
+        Element responseElem = replaceDateModified(replaceLastDataUpdate(replaceLastSchemaUpdateDate(executeRequest(requestElem).getOwnerDocument()))).getDocumentElement();
 
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
@@ -151,18 +151,6 @@ public class XmlaTest extends TestCase {
             // display visual diffs.
             diffRepos.assertEquals("response", "${response}", actualResponse);
         }
-    }
-
-    private Element ignoreLastUpdateDate(Element element) {
-        NodeList elements = element.getElementsByTagName("LAST_SCHEMA_UPDATE");
-        for (int i = elements.getLength(); i > 0; i--) {
-            blankNode(elements.item(i - 1));
-        }
-        return element;
-    }
-
-    private void blankNode(Node node) {
-        node.setTextContent("");
     }
 
     private Element executeRequest(Element requestElem) {

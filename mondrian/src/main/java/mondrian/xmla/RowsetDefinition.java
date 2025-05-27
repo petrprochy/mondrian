@@ -563,20 +563,24 @@ public enum RowsetDefinition {
             MdschemaCubesRowset.SchemaUpdatedBy,
             MdschemaCubesRowset.LastDataUpdate,
             MdschemaCubesRowset.DataUpdatedBy,
+            MdschemaCubesRowset.Description,
             MdschemaCubesRowset.IsDrillthroughEnabled,
-            MdschemaCubesRowset.IsWriteEnabled,
             MdschemaCubesRowset.IsLinkable,
+            MdschemaCubesRowset.IsWriteEnabled,
             MdschemaCubesRowset.IsSqlEnabled,
             MdschemaCubesRowset.CubeCaption,
-            MdschemaCubesRowset.Description,
+            MdschemaCubesRowset.BaseCubeName,
+            MdschemaCubesRowset.CubeSource,
             MdschemaCubesRowset.Dimensions,
             MdschemaCubesRowset.Sets,
-            MdschemaCubesRowset.Measures
+            MdschemaCubesRowset.Measures,
         },
         new Column[] {
             MdschemaCubesRowset.CatalogName,
             MdschemaCubesRowset.SchemaName,
             MdschemaCubesRowset.CubeName,
+            MdschemaCubesRowset.CubeType,
+            MdschemaCubesRowset.BaseCubeName,
         })
     {
         public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
@@ -3468,6 +3472,13 @@ TODO: see above
                 Column.RESTRICTION,
                 Column.REQUIRED,
                 "Cube type.");
+        private static final Column BaseCubeName = new Column(
+                "BASE_CUBE_NAME",
+                Type.String,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "The name of the source cube if this cube is a perspective cube.");
         private static final Column CubeGuid =
             new Column(
                 "CUBE_GUID",
@@ -3589,7 +3600,15 @@ TODO: see above
                 Column.NOT_RESTRICTION,
                 Column.OPTIONAL,
                 "Measures in this cube.");
+        private static final Column CubeSource = new Column(
+                "CUBE_SOURCE",
+                Type.Integer,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of these valid values:\n\n1 CUBE\n\n2 DIMENSION");
 
+//        @SuppressWarnings("unchecked")
         public void populateImpl(
             XmlaResponse response,
             OlapConnection connection,
@@ -3630,12 +3649,9 @@ TODO: see above
                         row.set(IsSqlEnabled.name, false);
                         row.set(CubeCaption.name, cube.getCaption());
                         row.set(Description.name, desc);
-                        Format formatter =
-                            new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-                        String formattedDate =
-                            formatter.format(
-                                extra.getSchemaLoadDate(schema));
-                        row.set(LastSchemaUpdate.name, formattedDate);
+                        row.set(CubeSource.name, 1);
+                        row.set(LastSchemaUpdate.name, formatDate(extra.getSchemaLoadDate(schema)));
+                        row.set(LastDataUpdate.name, formatDate(extra.getSchemaLoadDate(schema)));
                         if (deep) {
                             row.set(
                                 Dimensions.name,

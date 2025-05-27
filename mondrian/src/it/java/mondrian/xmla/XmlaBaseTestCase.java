@@ -151,7 +151,7 @@ System.out.println("requestText=" + requestText);
         }
 
         Document gotDoc = XmlUtil.parse(bytes);
-        gotDoc = replaceDateModified(replaceLastSchemaUpdateDate(gotDoc));
+        gotDoc = replaceDateModified(replaceLastDataUpdate(replaceLastSchemaUpdateDate(gotDoc)));
         String gotStr = XmlUtil.toString(gotDoc, true);
         gotStr = maskVersion(gotStr);
         gotStr = testContext.upgradeActual(gotStr);
@@ -161,7 +161,7 @@ System.out.println("requestText=" + requestText);
             }
             return;
         }
-        expectedDoc = replaceDateModified(replaceLastSchemaUpdateDate(expectedDoc));
+        expectedDoc = replaceDateModified(replaceLastDataUpdate(replaceLastSchemaUpdateDate(expectedDoc)));
         String expectedStr = XmlUtil.toString(expectedDoc, true);
         try {
             XMLAssert.assertXMLEqual(expectedStr, gotStr);
@@ -350,11 +350,15 @@ System.out.println("Got CONTINUE");
     }
 
     public static Document replaceLastSchemaUpdateDate(Document doc) {
-        return replaceContent(doc, LAST_SCHEMA_UPDATE_NODE_NAME, LAST_SCHEMA_UPDATE_DATE);
+        return replaceContent(replaceContent(doc, LAST_SCHEMA_UPDATE_NODE_NAME, LAST_SCHEMA_UPDATE_DATE), "LastSchemaUpdate", LAST_SCHEMA_UPDATE_DATE);
     }
 
     public static Document replaceDateModified(Document doc) {
         return replaceContent(doc, "DATE_MODIFIED", LAST_SCHEMA_UPDATE_DATE);
+    }
+
+    public static Document replaceLastDataUpdate(Document doc) {
+        return replaceContent(replaceContent(doc, "LAST_DATA_UPDATE", LAST_SCHEMA_UPDATE_DATE), "LastDataUpdate", LAST_SCHEMA_UPDATE_DATE);
     }
 
     protected static Document replaceContent(Document doc, String element, String content) {
@@ -368,9 +372,10 @@ System.out.println("Got CONTINUE");
     }
 
     private String ignoreLastUpdateDate(String document) {
-        return document.replaceAll(
-            "\"LAST_SCHEMA_UPDATE\": \"....-..-..T..:..:..\"",
-            "\"LAST_SCHEMA_UPDATE\": \"" + LAST_SCHEMA_UPDATE_DATE + "\"");
+        document = document.replaceAll(
+                "\"(LAST_SCHEMA_UPDATE|LAST_DATA_UPDATE|text)\": \"....-..-..T..:..:..\"",
+                "\"$1\": \"" + LAST_SCHEMA_UPDATE_DATE + "\"");
+        return document;
     }
 
     protected Map<String, String> getCatalogNameUrls(TestContext testContext) {
