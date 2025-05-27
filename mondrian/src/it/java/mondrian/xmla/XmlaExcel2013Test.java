@@ -122,4 +122,8 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
     public void test130MDSCHEMA_HIERARCHIES() {
         helperTest(true);
     }
+
+    public void test132MDSCHEMA_MEASURES() {
+        helperTest(true);
+    }
 }

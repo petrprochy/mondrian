@@ -891,6 +891,8 @@ public enum RowsetDefinition {
             MdschemaMeasuresRowset.MeasureIsVisible,
             MdschemaMeasuresRowset.LevelsList,
             MdschemaMeasuresRowset.Description,
+            MdschemaMeasuresRowset.MeasuregroupName,
+            MdschemaMeasuresRowset.DisplayFolder,
             MdschemaMeasuresRowset.FormatString,
         },
         new Column[] {
@@ -898,10 +900,20 @@ public enum RowsetDefinition {
             MdschemaMeasuresRowset.SchemaName,
             MdschemaMeasuresRowset.CubeName,
             MdschemaMeasuresRowset.MeasureName,
+            MdschemaMeasuresRowset.MeasureUniqueName,
+            MdschemaMeasuresRowset.MeasuregroupName,
         })
     {
         public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
             return new MdschemaMeasuresRowset(request, handler);
+        }
+
+        @Override
+        Column[] getRestrictionColumns() {
+            return extendedRestrictions(
+                MdschemaMeasuresRowset.CubeSource,
+                MdschemaMeasuresRowset.MeasureVisibility
+            );
         }
     },
 
@@ -5189,6 +5201,35 @@ TODO: see above
                 Column.NOT_RESTRICTION,
                 Column.OPTIONAL,
                 "The default format string for the measure.");
+        private static final Column MeasuregroupName = new Column(
+                "MEASUREGROUP_NAME",
+                Type.String,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "The name of the measure group to which the measure belongs.");
+        private static final Column DisplayFolder = new Column(
+                "MEASURE_DISPLAY_FOLDER",
+                Type.String,
+                null,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
+                "The path to be used when displaying the measure in the user interface. Folder names will be separated by a semicolon. Nested folders are indicated by a backslash (\\).");
+        private static final Column CubeSource = new Column(
+                "CUBE_SOURCE",
+                Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of the following valid values:\n1 CUBE\n2 DIMENSION\nDefault restriction is a value of 1.");
+        private static final Column MeasureVisibility = new Column(
+                "MEASURE_VISIBILITY",
+                RowsetDefinition.Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of the following valid values: 1 Visible, 2 Not visible.");
+
 
         public void populateImpl(
             XmlaResponse response,
@@ -5324,6 +5365,8 @@ TODO: see above
 
             row.set(Description.name, desc);
             row.set(FormatString.name, formatString);
+            row.set(MeasuregroupName.name, cube.getName());
+            row.set(DisplayFolder.name, "");
             addRow(row, rows);
         }
 

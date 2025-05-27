@@ -515,6 +515,18 @@
                             <Name>MEASURE_UNIQUE_NAME</Name>
                             <Type>xsd:string</Type>
                         </Restrictions>
+                        <Restrictions>
+                            <Name>MEASUREGROUP_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_SOURCE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASURE_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
                         <Description/>
                     </row>
                     <row>
@@ -1774,6 +1786,8 @@
                                 <xsd:element name="MEASURE_IS_VISIBLE" sql:field="MEASURE_IS_VISIBLE" type="xsd:boolean"/>
                                 <xsd:element minOccurs="0" name="LEVELS_LIST" sql:field="LEVELS_LIST" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASUREGROUP_NAME" sql:field="MEASUREGROUP_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASURE_DISPLAY_FOLDER" sql:field="MEASURE_DISPLAY_FOLDER" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="DEFAULT_FORMAT_STRING" sql:field="DEFAULT_FORMAT_STRING" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
@@ -1857,6 +1871,8 @@
                                 <xsd:element name="MEASURE_IS_VISIBLE" sql:field="MEASURE_IS_VISIBLE" type="xsd:boolean"/>
                                 <xsd:element minOccurs="0" name="LEVELS_LIST" sql:field="LEVELS_LIST" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASUREGROUP_NAME" sql:field="MEASUREGROUP_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASURE_DISPLAY_FOLDER" sql:field="MEASURE_DISPLAY_FOLDER" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="DEFAULT_FORMAT_STRING" sql:field="DEFAULT_FORMAT_STRING" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
@@ -1873,6 +1889,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Customer Count Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1886,6 +1904,8 @@
                         <DATA_TYPE>130</DATA_TYPE>
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Profit Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>$#,##0.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1899,6 +1919,8 @@
                         <DATA_TYPE>130</DATA_TYPE>
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Profit Growth Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>0.0%</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1912,6 +1934,8 @@
                         <DATA_TYPE>130</DATA_TYPE>
                         <MEASURE_IS_VISIBLE>false</MEASURE_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Profit last Period Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>$#,##0.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1926,6 +1950,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Promotion Sales Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1940,6 +1966,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Sales Count Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1954,6 +1982,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Store Cost Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1968,6 +1998,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Store Sales Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -1982,6 +2014,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Unit Sales Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>Standard</DEFAULT_FORMAT_STRING>
                     </row>
                 </root>
@@ -2062,6 +2096,8 @@
                                 <xsd:element name="MEASURE_IS_VISIBLE" sql:field="MEASURE_IS_VISIBLE" type="xsd:boolean"/>
                                 <xsd:element minOccurs="0" name="LEVELS_LIST" sql:field="LEVELS_LIST" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASUREGROUP_NAME" sql:field="MEASUREGROUP_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASURE_DISPLAY_FOLDER" sql:field="MEASURE_DISPLAY_FOLDER" type="xsd:string"/>
                                 <xsd:element minOccurs="0" name="DEFAULT_FORMAT_STRING" sql:field="DEFAULT_FORMAT_STRING" type="xsd:string"/>
                             </xsd:sequence>
                         </xsd:complexType>
@@ -2078,6 +2114,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Customer Count Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2091,6 +2129,8 @@
                         <DATA_TYPE>130</DATA_TYPE>
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Profit Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>$#,##0.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2104,6 +2144,8 @@
                         <DATA_TYPE>130</DATA_TYPE>
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Profit Growth Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>0.0%</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2118,6 +2160,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Promotion Sales Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2132,6 +2176,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Sales Count Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2146,6 +2192,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Store Cost Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2160,6 +2208,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Store Sales Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>#,###.00</DEFAULT_FORMAT_STRING>
                     </row>
                     <row>
@@ -2174,6 +2224,8 @@
                         <MEASURE_IS_VISIBLE>true</MEASURE_IS_VISIBLE>
                         <LEVELS_LIST>[Store].[Store Name],[Store Size in SQFT].[Store Sqft],[Store Type].[Store Type],[Time].[Month],[Time].[Weekly].[Day],[Product].[Product Name],[Promotion Media].[Media Type],[Promotions].[Promotion Name],[Customers].[Name],[Education Level].[Education Level],[Gender].[Gender],[Marital Status].[Marital Status],[Yearly Income].[Yearly Income]</LEVELS_LIST>
                         <DESCRIPTION>Sales Cube - Unit Sales Member</DESCRIPTION>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <MEASURE_DISPLAY_FOLDER/>
                         <DEFAULT_FORMAT_STRING>Standard</DEFAULT_FORMAT_STRING>
                     </row>
                 </root>
@@ -3255,6 +3307,18 @@
                         <Restrictions>
                             <Name>MEASURE_UNIQUE_NAME</Name>
                             <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASUREGROUP_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_SOURCE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASURE_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
                         </Restrictions>
                         <Description/>
                     </row>
