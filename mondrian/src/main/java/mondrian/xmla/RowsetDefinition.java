@@ -106,8 +106,9 @@ public enum RowsetDefinition {
             DiscoverSchemaRowsetsRowset.SchemaGuid,
             DiscoverSchemaRowsetsRowset.Restrictions,
             DiscoverSchemaRowsetsRowset.Description,
+            DiscoverSchemaRowsetsRowset.RestrictionsMask,
         },
-        null /* not sorted */)
+        new Column[]{DiscoverSchemaRowsetsRowset.SchemaName})
     {
         public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
             return new DiscoverSchemaRowsetsRowset(request, handler);
@@ -1674,7 +1675,14 @@ public enum RowsetDefinition {
                 Column.NOT_RESTRICTION,
                 Column.REQUIRED,
                 "A localizable description of the schema");
-
+        private static final Column RestrictionsMask =
+                new Column(
+                        "RestrictionsMask",
+                        Type.UnsignedLong,
+                        null,
+                        Column.NOT_RESTRICTION,
+                        Column.OPTIONAL,
+                        "");
         public DiscoverSchemaRowsetsRowset(
             XmlaRequest request, XmlaHandler handler)
         {
@@ -1685,19 +1693,9 @@ public enum RowsetDefinition {
             XmlaResponse response, OlapConnection connection, List<Row> rows)
             throws XmlaException
         {
-            RowsetDefinition[] rowsetDefinitions =
-                RowsetDefinition.class.getEnumConstants().clone();
-            Arrays.sort(
-                rowsetDefinitions,
-                new Comparator<RowsetDefinition>() {
-                    public int compare(
-                        RowsetDefinition o1,
-                        RowsetDefinition o2)
-                    {
-                        return o1.name().compareTo(o2.name());
-                    }
-                });
-            for (RowsetDefinition rowsetDefinition : rowsetDefinitions) {
+            final RowsetDefinition[] rowsetDefinitions = RowsetDefinition.class.getEnumConstants().clone();
+            final List<String> schemaNames = getRestrictionValues(SchemaName);
+            Arrays.stream(rowsetDefinitions).filter(r -> schemaNames.isEmpty() || schemaNames.contains(r.name())).forEach(rowsetDefinition -> {
                 Row row = new Row();
                 row.set(SchemaName.name, rowsetDefinition.name());
 
@@ -1712,7 +1710,7 @@ public enum RowsetDefinition {
                 String desc = rowsetDefinition.getDescription();
                 row.set(Description.name, (desc == null) ? "" : desc);
                 addRow(row, rows);
-            }
+            });
         }
 
         private List<XmlElement> getRestrictions(

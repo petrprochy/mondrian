@@ -13282,6 +13282,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                                     </xsd:complexType>
                                 </xsd:element>
                                 <xsd:element name="Description" sql:field="Description" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="RestrictionsMask" sql:field="RestrictionsMask" type="xsd:unsignedLong"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:schema>

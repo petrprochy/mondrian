@@ -113,4 +113,9 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
     public void test016EndSession() {
         helperTest(true);
     }
+
+
+    public void test129DISCOVER_SCHEMA_ROWSETS() {
+        helperTest(true);
+    }
 }

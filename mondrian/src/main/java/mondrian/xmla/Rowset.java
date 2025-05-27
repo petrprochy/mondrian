@@ -470,6 +470,20 @@ abstract class Rowset implements XmlaConstants {
     }
 
     /**
+     * @return Returns a column's restriction as a list of Strings.
+     * @throws IllegalStateException if the restriction is not a list of Strings.
+     */
+    @SuppressWarnings("unchecked")
+    List<String> getRestrictionValues(RowsetDefinition.Column column) {
+        final Object o = Optional.ofNullable(restrictions.get(column.name)).orElseGet(Collections::emptyList);
+        if (o instanceof List) {
+            return (List<String>) o;
+        }
+        throw new IllegalStateException("Expected list, got " + o.getClass());
+    }
+
+
+    /**
      * Returns true if there is a restriction for the given column
      * definition.
      *
