@@ -8,13 +8,14 @@
 */
 package mondrian.test;
 
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 import mondrian.olap.Util;
-
-import junit.framework.*;
-
 import org.olap4j.test.TestContext;
 
 import java.util.Properties;
+import java.util.stream.Stream;
 
 /**
  * Test suite that runs the olap4j Test Compatiblity Kit (TCK) against
@@ -24,28 +25,29 @@ import java.util.Properties;
  * @since 2010/11/22
  */
 public class Olap4jTckTest extends TestCase {
-    private static final Util.Functor1<Boolean, Test> CONDITION =
-        new Util.Functor1<Boolean, Test>() {
-            public Boolean apply(Test test) {
+    private static final Util.Functor1<Boolean, Test> CONDITION = test -> {
                 if (!(test instanceof TestCase)) {
                     return true;
                 }
+                // Disabling the following until the olap4j test expected
+                // value is updated.
+                String[] excludes = {
+                    "testStatementTimeout",
+                    "testStatementCancel",
+                    "testDatabaseMetaDataGetCatalogs",
+                    "testCellSetBug",
+                    "testDatabaseMetaDataGetDatasources",
+                    "testDatabaseMetaDataGetHierarchies",
+                };
                 final TestCase testCase = (TestCase) test;
                 final String testCaseName = testCase.getName();
-                return !testCaseName.equals("testStatementTimeout")
+                return Stream.of(excludes).noneMatch(testCaseName::equals)
                     // olap4j-tck does not close ResultSet, and that's a
                     // resource leak
                     && !testCaseName.startsWith(
                         "testCubesDrillthroughReturnClause")
-                    && !testCaseName.equals("testStatementCancel")
-                    && !testCaseName.equals("testDatabaseMetaDataGetCatalogs")
-                    && !testCaseName.equals("testCellSetBug")
-                    // Disabling the following until the olap4j test expected
-                    // value is updated.
-                    && !testCaseName.equals(
-                        "testDatabaseMetaDataGetDatasources");
-            }
-        };
+                    ;
+            };
 
     public static TestSuite suite() {
         final Util.PropertyList list =

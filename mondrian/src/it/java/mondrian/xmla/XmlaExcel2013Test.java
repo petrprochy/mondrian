@@ -118,4 +118,8 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
     public void test129DISCOVER_SCHEMA_ROWSETS() {
         helperTest(true);
     }
+
+    public void test130MDSCHEMA_HIERARCHIES() {
+        helperTest(true);
+    }
 }

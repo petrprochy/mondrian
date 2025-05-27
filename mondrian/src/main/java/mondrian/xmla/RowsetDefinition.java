@@ -34,10 +34,11 @@ import org.olap4j.metadata.XmlaConstants;
 
 import java.lang.reflect.*;
 import java.sql.SQLException;
-import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Stream;
 
+import static mondrian.olap.Dimension.MEASURES_NAME;
 import static mondrian.olap.Util.filter;
 import static mondrian.xmla.XmlaConstants.*;
 import static mondrian.xmla.XmlaHandler.getExtra;
@@ -739,9 +740,11 @@ public enum RowsetDefinition {
             MdschemaHierarchiesRowset.IsReadWrite,
             MdschemaHierarchiesRowset.DimensionUniqueSettings,
             MdschemaHierarchiesRowset.DimensionIsVisible,
-            MdschemaHierarchiesRowset.HierarchyIsVisible,
             MdschemaHierarchiesRowset.HierarchyOrdinal,
             MdschemaHierarchiesRowset.DimensionIsShared,
+            MdschemaHierarchiesRowset.HierarchyIsVisible,
+            MdschemaHierarchiesRowset.HierarchyOrigin,
+            MdschemaHierarchiesRowset.DisplayFolder,
             MdschemaHierarchiesRowset.ParentChild,
             MdschemaHierarchiesRowset.Levels,
         },
@@ -751,10 +754,20 @@ public enum RowsetDefinition {
             MdschemaHierarchiesRowset.CubeName,
             MdschemaHierarchiesRowset.DimensionUniqueName,
             MdschemaHierarchiesRowset.HierarchyName,
+            MdschemaHierarchiesRowset.HierarchyUniqueName,
+            MdschemaHierarchiesRowset.HierarchyOrigin,
         })
     {
         public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
             return new MdschemaHierarchiesRowset(request, handler);
+        }
+
+        @Override
+        Column[] getRestrictionColumns() {
+            return extendedRestrictions(
+                MdschemaHierarchiesRowset.CubeSource,
+                MdschemaHierarchiesRowset.HierarchyVisibility
+            );
         }
     },
 
@@ -1114,7 +1127,7 @@ public enum RowsetDefinition {
     public abstract Rowset getRowset(XmlaRequest request, XmlaHandler handler);
 
     public Column lookupColumn(String name) {
-        for (Column columnDefinition : columnDefinitions) {
+        for (Column columnDefinition : getRestrictionColumns()) {
             if (columnDefinition.name.equals(name)) {
                 return columnDefinition;
             }
@@ -1699,7 +1712,7 @@ public enum RowsetDefinition {
         {
             final RowsetDefinition[] rowsetDefinitions = RowsetDefinition.class.getEnumConstants().clone();
             final List<String> schemaNames = getRestrictionValues(SchemaName);
-            Arrays.stream(rowsetDefinitions).filter(r -> schemaNames.isEmpty() || schemaNames.contains(r.name())).forEach(rowsetDefinition -> {
+            Stream.of(rowsetDefinitions).filter(r -> schemaNames.isEmpty() || schemaNames.contains(r.name())).forEach(rowsetDefinition -> {
                 Row row = new Row();
                 row.set(SchemaName.name, rowsetDefinition.name());
 
@@ -1721,20 +1734,14 @@ public enum RowsetDefinition {
             RowsetDefinition rowsetDefinition)
         {
             List<XmlElement> restrictionList = new ArrayList<XmlElement>();
-            final Column[] columns = rowsetDefinition.columnDefinitions;
+            final Column[] columns = rowsetDefinition.getRestrictionColumns();
             for (Column column : columns) {
-                if (column.restriction) {
-                    restrictionList.add(
-                        new XmlElement(
-                            Restrictions.name,
-                            null,
-                            new XmlElement[]{
+                restrictionList.add(new XmlElement(Restrictions.name, null,
+                        new XmlElement[]{
                                 new XmlElement("Name", null, column.name),
-                                new XmlElement(
-                                    "Type",
-                                    null,
-                                    column.getColumnType())}));
+                                new XmlElement("Type", null, column.getColumnType()),
                 }
+                ));
             }
             return restrictionList;
         }
@@ -1751,6 +1758,32 @@ public enum RowsetDefinition {
         }
     }
 
+    Column[] getRestrictionColumns() {
+        return onlyRestriction(Stream.of(columnDefinitions));
+    }
+
+    /**
+     * Filters column by set {@link Column#restriction} attribute.
+     *
+     * @param s Stream of columns.
+     * @return Restriction columns.
+     */
+    final Column[] onlyRestriction(Stream<Column> s) {
+        return s.filter(c -> c.restriction).toArray(Column[]::new);
+    }
+
+    /**
+     * Filters column definition by restriction and adds additional columns to end of this set.
+     *
+     * @param add Additional columns
+     * @return Restriction columns. This columns must have set restriction attribute.
+     */
+    final Column[] extendedRestrictions(Column... add) {
+        return onlyRestriction(Stream.concat(
+                Stream.of(columnDefinitions),
+                Stream.of(add)
+        ));
+    }
     public String getDescription() {
         return description;
     }
@@ -4301,7 +4334,6 @@ TODO: see above
                 Column.RESTRICTION,
                 Column.REQUIRED,
                 "The unique name of the hierarchy.");
-
         private static final Column HierarchyGuid =
             new Column(
                 "HIERARCHY_GUID",
@@ -4310,7 +4342,6 @@ TODO: see above
                 Column.NOT_RESTRICTION,
                 Column.OPTIONAL,
                 "Hierarchy GUID.");
-
         private static final Column HierarchyCaption =
             new Column(
                 "HIERARCHY_CAPTION",
@@ -4401,31 +4432,34 @@ TODO: see above
                 Column.NOT_RESTRICTION,
                 Column.REQUIRED,
                 "A Boolean that indicates whether the parent dimension is visible.");
-        private static final Column HierarchyIsVisible =
-            new Column(
-                "HIERARCHY_IS_VISIBLE",
-                Type.Boolean,
-                null,
-                Column.NOT_RESTRICTION,
-                Column.REQUIRED,
-                "A Boolean that indicates whether the hieararchy is visible.");
-        private static final Column HierarchyOrdinal =
-            new Column(
+        private static final Column HierarchyOrdinal = new Column(
                 "HIERARCHY_ORDINAL",
                 Type.UnsignedInteger,
                 null,
                 Column.NOT_RESTRICTION,
                 Column.REQUIRED,
-                "The ordinal number of the hierarchy across all hierarchies of "
-                + "the cube.");
-        private static final Column DimensionIsShared =
-            new Column(
+                "The ordinal number of the hierarchy across all hierarchies of the cube.");
+        private static final Column DimensionIsShared = new Column(
                 "DIMENSION_IS_SHARED",
                 Type.Boolean,
                 null,
                 Column.NOT_RESTRICTION,
                 Column.REQUIRED,
                 "Always returns true.");
+        private static final Column HierarchyIsVisible = new Column(
+                "HIERARCHY_IS_VISIBLE",
+                Type.Boolean,
+                null,
+                Column.NOT_RESTRICTION,
+                Column.REQUIRED,
+                "A Boolean that indicates whether the hieararchy is visible.");
+        private static final Column HierarchyOrigin = new Column(
+                "HIERARCHY_ORIGIN",
+                Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bit mask that determines the source of the hierarchy:\nMD_ORIGIN_USER_DEFINED identifies levels in a user defined hierarchy (0x0000001).\nMD_ORIGIN_ATTRIBUTE identifies levels in an attribute hierarchy (0x0000002).\nMD_ORIGIN_INTERNAL identifies levels in attribute hierarchies that are not enabled (0x0000004).\nMD_ORIGIN_KEY_ATTRIBUTE identifies levels in a key attribute hierarchy (0x0000008).\n");
         private static final Column Levels =
             new Column(
                 "LEVELS",
@@ -4434,6 +4468,28 @@ TODO: see above
                 Column.NOT_RESTRICTION,
                 Column.OPTIONAL,
                 "Levels in this hierarchy.");
+        private static final Column DisplayFolder = new Column(
+                "HIERARCHY_DISPLAY_FOLDER",
+                Type.String, 
+                null,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
+                "The path to be used when displaying the hierarchy in the user interface. Folder names will be separated by a semicolon (;). Nested folders are indicated by a backslash (\\).");
+        // Additional restrictions
+        private static final Column CubeSource = new Column(
+                "CUBE_SOURCE",
+                Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of the following valid values:\n1 CUBE\n2 DIMENSION\nDefault restriction is a value of 1.");
+        private static final Column HierarchyVisibility = new Column(
+                "HIERARCHY_VISIBILITY",
+                Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of the following valid values: 1 Visible, 2 Not visible.");
 
 
         /*
@@ -4580,6 +4636,9 @@ TODO: see above
             row.set(DimensionIsVisible.name, dimension.isVisible());
             row.set(HierarchyIsVisible.name, hierarchy.isVisible());
 
+            final int origin = (dimension.getName().equals(MEASURES_NAME)) ? 6 : 1;
+            row.set(HierarchyOrigin.name, origin);
+            row.set(DisplayFolder.name, "");
             row.set(HierarchyOrdinal.name, ordinal);
 
             // always true
@@ -6420,7 +6479,7 @@ TODO: see above
         };
     }
 
-    private static String formatDate(Date date) {
+    public static String formatDate(Date date) {
         return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(date);
     }
 
