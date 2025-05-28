@@ -1099,7 +1099,32 @@ public enum RowsetDefinition {
         public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
             return new MdschemaSetsRowset(request, handler);
         }
-    };
+    },
+    MDSCHEMA_MEASUREGROUPS(
+        22, null,
+        new Column[]{
+            RowsetDefinition.MdschemaMeasuregroupsRowset.CatalogName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.SchemaName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.CubeName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.MeasuregroupName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.Description,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.IsWriteEnabled,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.MeasuregroupCaption,
+        },
+        new Column[]{
+            RowsetDefinition.MdschemaMeasuregroupsRowset.CatalogName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.SchemaName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.CubeName,
+            RowsetDefinition.MdschemaMeasuregroupsRowset.MeasuregroupName,
+        })
+    {
+        public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
+            return new MdschemaMeasuregroupsRowset(request, handler);
+        }
+    },
+    ;
+
+    ;
 
     transient final Column[] columnDefinitions;
     transient final Column[] sortColumnDefinitions;
@@ -6049,6 +6074,82 @@ TODO: see above
                 row.set(Description.name, namedSet.getDescription());
                 addRow(row, rows);
             }
+        }
+    }
+
+    static class MdschemaMeasuregroupsRowset extends Rowset {
+        private final Util.Functor1<Boolean, Catalog> catalogNameCond;
+        private final Util.Functor1<Boolean, Schema> schemaNameCond;
+        private final Util.Functor1<Boolean, Cube> cubeNameCond;
+
+        MdschemaMeasuregroupsRowset(XmlaRequest request, XmlaHandler handler) {
+            super(RowsetDefinition.MDSCHEMA_MEASUREGROUPS, request, handler);
+            this.catalogNameCond = this.makeCondition(RowsetDefinition.CATALOG_NAME_GETTER, CatalogName);
+            this.schemaNameCond = this.makeCondition(RowsetDefinition.SCHEMA_NAME_GETTER, SchemaName);
+            this.cubeNameCond = this.makeCondition(RowsetDefinition.ELEMENT_NAME_GETTER, CubeName);
+        }
+
+        private static final Column CatalogName = new Column(
+                "CATALOG_NAME", RowsetDefinition.Type.String, null,
+                Column.RESTRICTION,Column.OPTIONAL,
+                "The name of the catalog to which this measure group belongs. NULL if the provider does not support catalogs.");
+        private static final Column SchemaName = new Column(
+                "SCHEMA_NAME", RowsetDefinition.Type.String, null,
+                Column.RESTRICTION, Column.OPTIONAL,
+                "Not supported.");
+        private static final Column CubeName = new Column(
+                "CUBE_NAME", RowsetDefinition.Type.String, null,
+                Column.RESTRICTION, Column.OPTIONAL,
+                "The name of the cube to which this measure group belongs.");
+        private static final Column MeasuregroupName = new Column(
+                "MEASUREGROUP_NAME", RowsetDefinition.Type.String, null,
+                Column.RESTRICTION, Column.OPTIONAL,
+                "The name of the measure group.");
+        private static final Column Description = new Column(
+                "DESCRIPTION", RowsetDefinition.Type.String, null,
+                Column.NOT_RESTRICTION, Column.OPTIONAL,
+                "A human-readable description of the measure group.");
+        private static final Column IsWriteEnabled = new Column(
+                "IS_WRITE_ENABLED", RowsetDefinition.Type.Boolean, null,
+                Column.NOT_RESTRICTION, Column.OPTIONAL,
+                "A Boolean that indicates whether the measure group is write-enabled.");
+        private static final Column MeasuregroupCaption = new Column(
+                "MEASUREGROUP_CAPTION", RowsetDefinition.Type.String, null,
+                Column.NOT_RESTRICTION, Column.OPTIONAL,
+                "The display caption for the measure group.");
+
+        public void populateImpl(XmlaResponse response, OlapConnection connection, List<Rowset.Row> rows) throws XmlaException, SQLException {
+            for(Catalog catalog : RowsetDefinition.catIter(connection, catNameCond(), catalogNameCond)) {
+                this.populateCatalog(connection, catalog, rows);
+            }
+
+        }
+
+        protected void populateCatalog(OlapConnection connection, Catalog catalog, List<Rowset.Row> rows) throws XmlaException, SQLException {
+            for(Schema schema : Util.filter(catalog.getSchemas(), schemaNameCond)) {
+                for(Cube cube : RowsetDefinition.filteredCubes(schema, this.cubeNameCond)) {
+                    if (!(cube instanceof SharedDimensionHolderCube)) {
+                        this.populateCube(connection, catalog, cube, rows);
+                    }
+                }
+            }
+
+        }
+
+        protected void populateCube(OlapConnection connection, Catalog catalog, Cube cube, List<Rowset.Row> rows) throws XmlaException, SQLException {
+            this.populateMeasuregroup(connection, catalog, cube, rows);
+        }
+
+        protected void populateMeasuregroup(OlapConnection connection, Catalog catalog, Cube cube, List<Rowset.Row> rows) throws XmlaException, SQLException {
+            Rowset.Row row = new Rowset.Row();
+            row.set(CatalogName.name, catalog.getName());
+            row.set(SchemaName.name, cube.getSchema().getName());
+            row.set(CubeName.name, cube.getName());
+            row.set(MeasuregroupName.name, cube.getName());
+            row.set(Description.name, "");
+            row.set(IsWriteEnabled.name, false);
+            row.set(MeasuregroupCaption.name, cube.getName());
+            this.addRow(row, rows);
         }
     }
 

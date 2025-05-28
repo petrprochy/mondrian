@@ -1188,6 +1188,27 @@
                         <Description/>
                     </row>
                     <row>
+                        <SchemaName>MDSCHEMA_MEASUREGROUPS</SchemaName>
+                        <SchemaGuid>E1625EBF-FA96-42FD-BEA6-DB90ADAFD96B</SchemaGuid>
+                        <Restrictions>
+                            <Name>CATALOG_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>SCHEMA_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>MEASUREGROUP_NAME</Name>
+                            <Type>xsd:string</Type>
+                        </Restrictions>
+                        <Description/>
+                    </row>
+                    <row>
                         <SchemaName>MDSCHEMA_MEASURES</SchemaName>
                         <SchemaGuid>C8B522DC-5CF3-11CE-ADE5-00AA0044773D</SchemaGuid>
                         <Restrictions>
@@ -3874,6 +3895,88 @@
                         <LiteralName>DBLITERAL_USER_NAME</LiteralName>
                         <LiteralMaxLength>0</LiteralMaxLength>
                         <LiteralNameEnumValue>19</LiteralNameEnumValue>
+                    </row>
+                </root>
+            </cxmla:return>
+        </cxmla:DiscoverResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+        </Resource>
+    </TestCase>
+    <TestCase name="test139MDSCHEMA_MEASUREGROUPS">
+        <Resource name="request">
+            <![CDATA[
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <Session xmlns="urn:schemas-microsoft-com:xml-analysis" SessionId="${session.id}"/>
+    </soap:Header>
+    <soap:Body>
+        <Discover xmlns="urn:schemas-microsoft-com:xml-analysis">
+            <RequestType>MDSCHEMA_MEASUREGROUPS</RequestType>
+            <Restrictions>
+                <RestrictionList>
+                    <CUBE_NAME>Sales</CUBE_NAME>
+                </RestrictionList>
+            </Restrictions>
+            <Properties>
+                <PropertyList>
+                    <Catalog>FoodMart</Catalog>
+                    <VisualMode>1</VisualMode>
+                    <SafetyOptions>2</SafetyOptions>
+                    <MdxMissingMemberMode>Error</MdxMissingMemberMode>
+                    <LocaleIdentifier>1029</LocaleIdentifier>
+                    <DbpropMsmdMDXCompatibility>1</DbpropMsmdMDXCompatibility>
+                </PropertyList>
+            </Properties>
+        </Discover>
+    </soap:Body>
+</soap:Envelope>
+            ]]>
+        </Resource>
+        <Resource name="response">
+            <![CDATA[<?xml version="1.0"?>
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header>
+        <Session SessionId="${session.id}" xmlns="urn:schemas-microsoft-com:xml-analysis"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cxmla:DiscoverResponse xmlns:cxmla="urn:schemas-microsoft-com:xml-analysis">
+            <cxmla:return>
+                <root xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:EX="urn:schemas-microsoft-com:xml-analysis:exception" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns="urn:schemas-microsoft-com:xml-analysis:rowset" xmlns:sql="urn:schemas-microsoft-com:xml-sql" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <xsd:element name="root">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="row" type="row"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:simpleType name="uuid">
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                        <xsd:complexType name="row">
+                            <xsd:sequence>
+                                <xsd:element minOccurs="0" name="CATALOG_NAME" sql:field="CATALOG_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="SCHEMA_NAME" sql:field="SCHEMA_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="CUBE_NAME" sql:field="CUBE_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="MEASUREGROUP_NAME" sql:field="MEASUREGROUP_NAME" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="IS_WRITE_ENABLED" sql:field="IS_WRITE_ENABLED" type="xsd:boolean"/>
+                                <xsd:element minOccurs="0" name="MEASUREGROUP_CAPTION" sql:field="MEASUREGROUP_CAPTION" type="xsd:string"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:schema>
+                    <row>
+                        <CATALOG_NAME>FoodMart</CATALOG_NAME>
+                        <SCHEMA_NAME>FoodMart</SCHEMA_NAME>
+                        <CUBE_NAME>Sales</CUBE_NAME>
+                        <MEASUREGROUP_NAME>Sales</MEASUREGROUP_NAME>
+                        <DESCRIPTION/>
+                        <IS_WRITE_ENABLED>false</IS_WRITE_ENABLED>
+                        <MEASUREGROUP_CAPTION>Sales</MEASUREGROUP_CAPTION>
                     </row>
                 </root>
             </cxmla:return>

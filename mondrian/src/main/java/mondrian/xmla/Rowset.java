@@ -534,6 +534,19 @@ abstract class Rowset implements XmlaConstants {
             int i = this.names.indexOf(name);
             return (i < 0) ? null : this.values.get(i);
         }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder("Row{");
+            for (int i = 0; i < names.size(); i++) {
+                sb.append(names.get(i)).append('=').append(values.get(i));
+                if (i < names.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+            sb.append("}");
+            return sb.toString();
+        }
     }
 
     /**
