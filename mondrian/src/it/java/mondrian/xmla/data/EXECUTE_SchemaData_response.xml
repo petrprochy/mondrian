@@ -159,86 +159,86 @@
     <OlapInfo>
     <AxesInfo>
     <AxisInfo name="Axis0">
-    <HierarchyInfo name="Customers">
-    <UName name="[Customers].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Customers].[MEMBER_CAPTION]"/>
-    <LName name="[Customers].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Customers].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Customers].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Measures">
-    <UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Measures].[MEMBER_CAPTION]"/>
-    <LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Measures].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Measures].[DISPLAY_INFO]"/></HierarchyInfo></AxisInfo>
+    <HierarchyInfo name="[Customers]">
+    <UName name="[Customers].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Customers].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Customers].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Customers].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Customers].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Measures]">
+    <UName name="[Measures].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Measures].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Measures].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Measures].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Measures].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo></AxisInfo>
     <AxisInfo name="Axis1">
-    <HierarchyInfo name="Store">
-    <UName name="[Store].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Store].[MEMBER_CAPTION]"/>
-    <LName name="[Store].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Store].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Store].[DISPLAY_INFO]"/></HierarchyInfo></AxisInfo>
+    <HierarchyInfo name="[Store]">
+    <UName name="[Store].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Store].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Store].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Store].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Store].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo></AxisInfo>
     <AxisInfo name="SlicerAxis">
-    <HierarchyInfo name="Time">
-    <UName name="[Time].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Time].[MEMBER_CAPTION]"/>
-    <LName name="[Time].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Time].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Time].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Product">
-    <UName name="[Product].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Product].[MEMBER_CAPTION]"/>
-    <LName name="[Product].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Product].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Product].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Promotion Media">
-    <UName name="[Promotion Media].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Promotion Media].[MEMBER_CAPTION]"/>
-    <LName name="[Promotion Media].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Promotion Media].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Promotion Media].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Promotions">
-    <UName name="[Promotions].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Promotions].[MEMBER_CAPTION]"/>
-    <LName name="[Promotions].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Promotions].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Promotions].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Education Level">
-    <UName name="[Education Level].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Education Level].[MEMBER_CAPTION]"/>
-    <LName name="[Education Level].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Education Level].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Education Level].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Gender">
-    <UName name="[Gender].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Gender].[MEMBER_CAPTION]"/>
-    <LName name="[Gender].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Gender].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Gender].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Marital Status">
-    <UName name="[Marital Status].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Marital Status].[MEMBER_CAPTION]"/>
-    <LName name="[Marital Status].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Marital Status].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Marital Status].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Store Size in SQFT">
-    <UName name="[Store Size in SQFT].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Store Size in SQFT].[MEMBER_CAPTION]"/>
-    <LName name="[Store Size in SQFT].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Store Size in SQFT].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Store Size in SQFT].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Store Type">
-    <UName name="[Store Type].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Store Type].[MEMBER_CAPTION]"/>
-    <LName name="[Store Type].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Store Type].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Store Type].[DISPLAY_INFO]"/></HierarchyInfo>
-    <HierarchyInfo name="Yearly Income">
-    <UName name="[Yearly Income].[MEMBER_UNIQUE_NAME]"/>
-    <Caption name="[Yearly Income].[MEMBER_CAPTION]"/>
-    <LName name="[Yearly Income].[LEVEL_UNIQUE_NAME]"/>
-    <LNum name="[Yearly Income].[LEVEL_NUMBER]"/>
-    <DisplayInfo name="[Yearly Income].[DISPLAY_INFO]"/></HierarchyInfo>
+    <HierarchyInfo name="[Time]">
+    <UName name="[Time].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Time].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Time].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Time].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Time].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Product]">
+    <UName name="[Product].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Product].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Product].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Product].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Product].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Promotion Media]">
+    <UName name="[Promotion Media].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Promotion Media].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Promotion Media].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Promotion Media].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Promotion Media].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Promotions]">
+    <UName name="[Promotions].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Promotions].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Promotions].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Promotions].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Promotions].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Education Level]">
+    <UName name="[Education Level].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Education Level].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Education Level].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Education Level].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Education Level].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Gender]">
+    <UName name="[Gender].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Gender].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Gender].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Gender].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Gender].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Marital Status]">
+    <UName name="[Marital Status].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Marital Status].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Marital Status].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Marital Status].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Marital Status].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Store Size in SQFT]">
+    <UName name="[Store Size in SQFT].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Store Size in SQFT].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Store Size in SQFT].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Store Size in SQFT].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Store Size in SQFT].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Store Type]">
+    <UName name="[Store Type].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Store Type].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Store Type].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Store Type].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Store Type].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
+    <HierarchyInfo name="[Yearly Income]">
+    <UName name="[Yearly Income].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+    <Caption name="[Yearly Income].[MEMBER_CAPTION]" type="xsd:string"/>
+    <LName name="[Yearly Income].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+    <LNum name="[Yearly Income].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+    <DisplayInfo name="[Yearly Income].[DISPLAY_INFO]" type="xsd:unsignedInt"/></HierarchyInfo>
     </AxisInfo>
     </AxesInfo>
     <CellInfo>
@@ -250,1014 +250,1014 @@
     <Axis name="Axis0">
     <Tuples>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Altadena]</UName>
     <Caption>Altadena</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Arcadia]</UName>
     <Caption>Arcadia</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Bellflower]</UName>
     <Caption>Bellflower</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Berkeley]</UName>
     <Caption>Berkeley</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Beverly Hills]</UName>
     <Caption>Beverly Hills</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Burbank]</UName>
     <Caption>Burbank</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Burlingame]</UName>
     <Caption>Burlingame</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Chula Vista]</UName>
     <Caption>Chula Vista</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Colma]</UName>
     <Caption>Colma</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Concord]</UName>
     <Caption>Concord</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Coronado]</UName>
     <Caption>Coronado</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Daly City]</UName>
     <Caption>Daly City</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Downey]</UName>
     <Caption>Downey</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[El Cajon]</UName>
     <Caption>El Cajon</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Fremont]</UName>
     <Caption>Fremont</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Glendale]</UName>
     <Caption>Glendale</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Grossmont]</UName>
     <Caption>Grossmont</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Imperial Beach]</UName>
     <Caption>Imperial Beach</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[La Jolla]</UName>
     <Caption>La Jolla</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[La Mesa]</UName>
     <Caption>La Mesa</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Lakewood]</UName>
     <Caption>Lakewood</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Lemon Grove]</UName>
     <Caption>Lemon Grove</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Lincoln Acres]</UName>
     <Caption>Lincoln Acres</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Long Beach]</UName>
     <Caption>Long Beach</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Los Angeles]</UName>
     <Caption>Los Angeles</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Mill Valley]</UName>
     <Caption>Mill Valley</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[National City]</UName>
     <Caption>National City</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Newport Beach]</UName>
     <Caption>Newport Beach</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Novato]</UName>
     <Caption>Novato</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Oakland]</UName>
     <Caption>Oakland</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Palo Alto]</UName>
     <Caption>Palo Alto</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Pomona]</UName>
     <Caption>Pomona</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Redwood City]</UName>
     <Caption>Redwood City</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Richmond]</UName>
     <Caption>Richmond</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[San Carlos]</UName>
     <Caption>San Carlos</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[San Diego]</UName>
     <Caption>San Diego</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[San Francisco]</UName>
     <Caption>San Francisco</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[San Gabriel]</UName>
     <Caption>San Gabriel</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[San Jose]</UName>
     <Caption>San Jose</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Santa Cruz]</UName>
     <Caption>Santa Cruz</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Santa Monica]</UName>
     <Caption>Santa Monica</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Spring Valley]</UName>
     <Caption>Spring Valley</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Torrance]</UName>
     <Caption>Torrance</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[West Covina]</UName>
     <Caption>West Covina</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[CA].[Woodland Hills]</UName>
     <Caption>Woodland Hills</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Albany]</UName>
     <Caption>Albany</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>1000</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Beaverton]</UName>
     <Caption>Beaverton</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Corvallis]</UName>
     <Caption>Corvallis</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Lake Oswego]</UName>
     <Caption>Lake Oswego</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Lebanon]</UName>
     <Caption>Lebanon</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Milwaukie]</UName>
     <Caption>Milwaukie</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Oregon City]</UName>
     <Caption>Oregon City</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Portland]</UName>
     <Caption>Portland</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Salem]</UName>
     <Caption>Salem</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[W. Linn]</UName>
     <Caption>W. Linn</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[OR].[Woodburn]</UName>
     <Caption>Woodburn</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Anacortes]</UName>
     <Caption>Anacortes</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>1000</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Ballard]</UName>
     <Caption>Ballard</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Bellingham]</UName>
     <Caption>Bellingham</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Bremerton]</UName>
     <Caption>Bremerton</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Burien]</UName>
     <Caption>Burien</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Edmonds]</UName>
     <Caption>Edmonds</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Everett]</UName>
     <Caption>Everett</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Issaquah]</UName>
     <Caption>Issaquah</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Kirkland]</UName>
     <Caption>Kirkland</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Lynnwood]</UName>
     <Caption>Lynnwood</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Marysville]</UName>
     <Caption>Marysville</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Olympia]</UName>
     <Caption>Olympia</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Port Orchard]</UName>
     <Caption>Port Orchard</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Puyallup]</UName>
     <Caption>Puyallup</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Redmond]</UName>
     <Caption>Redmond</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Renton]</UName>
     <Caption>Renton</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Seattle]</UName>
     <Caption>Seattle</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Sedro Woolley]</UName>
     <Caption>Sedro Woolley</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Spokane]</UName>
     <Caption>Spokane</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Tacoma]</UName>
     <Caption>Tacoma</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Walla Walla]</UName>
     <Caption>Walla Walla</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
     <LNum>0</LNum>
     <DisplayInfo>131072</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Customers">
+    <Member Hierarchy="[Customers]">
     <UName>[Customers].[USA].[WA].[Yakima]</UName>
     <Caption>Yakima</Caption>
     <LName>[Customers].[City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>132072</DisplayInfo></Member>
-    <Member Hierarchy="Measures">
+    <Member Hierarchy="[Measures]">
     <UName>[Measures].[Store Cost]</UName>
     <Caption>Store Cost</Caption>
     <LName>[Measures].[MeasuresLevel]</LName>
@@ -1267,91 +1267,91 @@
     <Axis name="Axis1">
     <Tuples>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[CA].[Beverly Hills]</UName>
     <Caption>Beverly Hills</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[CA].[Los Angeles]</UName>
     <Caption>Los Angeles</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[CA].[San Diego]</UName>
     <Caption>San Diego</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[CA].[San Francisco]</UName>
     <Caption>San Francisco</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[OR].[Portland]</UName>
     <Caption>Portland</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>1</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[OR].[Salem]</UName>
     <Caption>Salem</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Bellingham]</UName>
     <Caption>Bellingham</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>1</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Bremerton]</UName>
     <Caption>Bremerton</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Seattle]</UName>
     <Caption>Seattle</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Spokane]</UName>
     <Caption>Spokane</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Tacoma]</UName>
     <Caption>Tacoma</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Walla Walla]</UName>
     <Caption>Walla Walla</Caption>
     <LName>[Store].[Store City]</LName>
     <LNum>3</LNum>
     <DisplayInfo>131073</DisplayInfo></Member></Tuple>
     <Tuple>
-    <Member Hierarchy="Store">
+    <Member Hierarchy="[Store]">
     <UName>[Store].[USA].[WA].[Yakima]</UName>
     <Caption>Yakima</Caption>
     <LName>[Store].[Store City]</LName>
@@ -1360,61 +1360,61 @@
     <Axis name="SlicerAxis">
     <Tuples>
     <Tuple>
-    <Member Hierarchy="Time">
+    <Member Hierarchy="[Time]">
     <UName>[Time].[1997]</UName>
     <Caption>1997</Caption>
     <LName>[Time].[Year]</LName>
     <LNum>0</LNum>
     <DisplayInfo>4</DisplayInfo></Member>
-    <Member Hierarchy="Product">
+    <Member Hierarchy="[Product]">
     <UName>[Product].[All Products]</UName>
     <Caption>All Products</Caption>
     <LName>[Product].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>3</DisplayInfo></Member>
-    <Member Hierarchy="Promotion Media">
+    <Member Hierarchy="[Promotion Media]">
     <UName>[Promotion Media].[All Media]</UName>
     <Caption>All Media</Caption>
     <LName>[Promotion Media].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>14</DisplayInfo></Member>
-    <Member Hierarchy="Promotions">
+    <Member Hierarchy="[Promotions]">
     <UName>[Promotions].[All Promotions]</UName>
     <Caption>All Promotions</Caption>
     <LName>[Promotions].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>51</DisplayInfo></Member>
-    <Member Hierarchy="Education Level">
+    <Member Hierarchy="[Education Level]">
     <UName>[Education Level].[All Education Level]</UName>
     <Caption>All Education Level</Caption>
     <LName>[Education Level].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>5</DisplayInfo></Member>
-    <Member Hierarchy="Gender">
+    <Member Hierarchy="[Gender]">
     <UName>[Gender].[All Gender]</UName>
     <Caption>All Gender</Caption>
     <LName>[Gender].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>2</DisplayInfo></Member>
-    <Member Hierarchy="Marital Status">
+    <Member Hierarchy="[Marital Status]">
     <UName>[Marital Status].[All Marital Status]</UName>
     <Caption>All Marital Status</Caption>
     <LName>[Marital Status].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>2</DisplayInfo></Member>
-    <Member Hierarchy="Store Size in SQFT">
+    <Member Hierarchy="[Store Size in SQFT]">
     <UName>[Store Size in SQFT].[All Store Size in SQFT]</UName>
     <Caption>All Store Size in SQFT</Caption>
     <LName>[Store Size in SQFT].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>21</DisplayInfo></Member>
-    <Member Hierarchy="Store Type">
+    <Member Hierarchy="[Store Type]">
     <UName>[Store Type].[All Store Type]</UName>
     <Caption>All Store Type</Caption>
     <LName>[Store Type].[(All)]</LName>
     <LNum>0</LNum>
     <DisplayInfo>6</DisplayInfo></Member>
-    <Member Hierarchy="Yearly Income">
+    <Member Hierarchy="[Yearly Income]">
     <UName>[Yearly Income].[All Yearly Income]</UName>
     <Caption>All Yearly Income</Caption>
     <LName>[Yearly Income].[(All)]</LName>

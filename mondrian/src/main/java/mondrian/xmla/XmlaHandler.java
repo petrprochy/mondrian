@@ -694,11 +694,13 @@ public class XmlaHandler {
         }
     }
 
-    private void checkFormat(XmlaRequest request) throws XmlaException {
+    private Format checkFormat(XmlaRequest request) throws XmlaException {
         // Check response's rowset format in request
         final Map<String, String> properties = request.getProperties();
+        final String formatName = properties.get(PropertyDefinition.Format.name());
+        Format format = null;
         if (request.isDrillThrough()) {
-            Format format = getFormat(request, null);
+            format = getFormat(request, null);
             if (format != Format.Tabular) {
                 throw new XmlaException(
                     CLIENT_FAULT_FC,
@@ -709,30 +711,21 @@ public class XmlaHandler {
                         + "through"));
             }
         } else {
-            final String formatName =
-                properties.get(PropertyDefinition.Format.name());
             if (formatName != null) {
-                Format format = getFormat(request, null);
-                if (format != Format.Multidimensional
-                    && format != Format.Tabular)
-                {
-                    throw new UnsupportedOperationException(
-                        "<Format>: only 'Multidimensional', 'Tabular' "
-                        + "currently supported");
+                format = getFormat(request, null);
+                if (format == null) {
+                    throw new UnsupportedOperationException("<Format>: only 'Multidimensional', 'Tabular', 'Native' currently supported");
                 }
             }
-            final String axisFormatName =
-                properties.get(PropertyDefinition.AxisFormat.name());
+            final String axisFormatName = properties.get(PropertyDefinition.AxisFormat.name());
             if (axisFormatName != null) {
-                AxisFormat axisFormat = Util.lookup(
-                    AxisFormat.class, axisFormatName, null);
-
+                AxisFormat axisFormat = Util.lookup(AxisFormat.class, axisFormatName, null);
                 if (axisFormat != AxisFormat.TupleFormat) {
-                    throw new UnsupportedOperationException(
-                        "<AxisFormat>: only 'TupleFormat' currently supported");
+                    throw new UnsupportedOperationException("<AxisFormat>: only 'TupleFormat' currently supported");
                 }
             }
         }
+        return format;
     }
 
     private void execute(
@@ -1686,7 +1679,7 @@ public class XmlaHandler {
         if ((mdx == null) || (mdx.length() == 0)) {
             return null;
         }
-        checkFormat(request);
+        final Format format = checkFormat(request);
 
         OlapConnection connection = null;
         PreparedOlapStatement statement = null;
@@ -1710,21 +1703,17 @@ public class XmlaHandler {
             try {
                 cellSet = statement.executeQuery();
 
-                final Format format = getFormat(request, null);
                 final Content content = getContent(request);
                 final Enumeration.ResponseMimeType responseMimeType =
                     getResponseMimeType(request);
                 final MDDataSet dataSet;
-                if (format == Format.Multidimensional) {
-                    dataSet =
-                        new MDDataSet_Multidimensional(
+                if (format == Format.Tabular) {
+                    dataSet = new MDDataSet_Tabular(cellSet);
+                } else {
+                    dataSet = new MDDataSet_Multidimensional(
                             cellSet,
                             content != Content.DataIncludeDefaultSlicer,
-                            responseMimeType
-                            == Enumeration.ResponseMimeType.JSON);
-                } else {
-                    dataSet =
-                        new MDDataSet_Tabular(cellSet);
+                            responseMimeType == Enumeration.ResponseMimeType.JSON);
                 }
                 success = true;
                 return dataSet;
@@ -1846,36 +1835,49 @@ public class XmlaHandler {
             final String name)
         {
             return new Property() {
+                @Override
                 public Datatype getDatatype() {
                     return property.getDatatype();
                 }
 
+                @Override
                 public Set<TypeFlag> getType() {
                     return property.getType();
                 }
 
+                @Override
                 public ContentType getContentType() {
                     return property.getContentType();
                 }
 
+                @Override
                 public String getName() {
                     return name;
                 }
 
+                @Override
                 public String getUniqueName() {
                     return property.getUniqueName();
                 }
 
+                @Override
                 public String getCaption() {
                     return property.getCaption();
                 }
 
+                @Override
                 public String getDescription() {
                     return property.getDescription();
                 }
 
+                @Override
                 public boolean isVisible() {
                     return property.isVisible();
+                }
+
+                @Override
+                public String toString() {
+                    return property.toString();
                 }
             };
         }
@@ -1885,9 +1887,9 @@ public class XmlaHandler {
         private List<Hierarchy> slicerAxisHierarchies;
         private final boolean omitDefaultSlicerInfo;
         private final boolean json;
-        private XmlaUtil.ElementNameEncoder encoder =
-            XmlaUtil.ElementNameEncoder.INSTANCE;
-        private XmlaExtra extra;
+        private final XmlaUtil.ElementNameEncoder encoder = XmlaUtil.ElementNameEncoder.INSTANCE;
+        private final OlapConnection connection;
+        private final XmlaExtra extra;
 
         protected MDDataSet_Multidimensional(
             CellSet cellSet,
@@ -1898,7 +1900,8 @@ public class XmlaHandler {
             super(cellSet);
             this.omitDefaultSlicerInfo = omitDefaultSlicerInfo;
             this.json = json;
-            this.extra = getExtra(cellSet.getStatement().getConnection());
+            connection = cellSet.getStatement().getConnection();
+            this.extra = getExtra(connection);
         }
 
         public void unparse(SaxWriter writer)
@@ -1921,6 +1924,13 @@ public class XmlaHandler {
             writer.startElement("CubeInfo");
             writer.startElement("Cube");
             writer.textElement("CubeName", cube.getName());
+            String date = RowsetDefinition.formatDate(this.extra.getSchemaLoadDate(this.connection.getOlapSchema()));
+            writer.startElement("LastDataUpdate", "xmlns", NS_AS_ENGINE);
+            writer.characters(date);
+            writer.endElement();
+            writer.startElement("LastSchemaUpdate", "xmlns", NS_AS_ENGINE);
+            writer.characters(date);
+            writer.endElement();
             writer.endElement();
             writer.endElement(); // CubeInfo
 
@@ -2061,7 +2071,7 @@ public class XmlaHandler {
             writer.startSequence(null, "HierarchyInfo");
             for (Hierarchy hierarchy : hierarchies) {
                 writer.startElement(
-                    "HierarchyInfo", "name", hierarchy.getName());
+                    "HierarchyInfo", "name", hierarchy.getUniqueName());
                 for (final Property prop : props) {
                     if (prop instanceof IMondrianOlap4jProperty) {
                         writeProperty(writer, hierarchy, prop);
@@ -2110,7 +2120,7 @@ public class XmlaHandler {
                 hierarchy.getUniqueName()
                 + "."
                 + Util.quoteMdxIdentifier(longProp.getName()));
-            if (longProp == prop) {
+            if (!(longProp instanceof IMondrianOlap4jProperty)) {
                 // Adding type attribute to the optional properties
                 values.add("type");
                 values.add(getXsdType(longProp));
@@ -2282,7 +2292,7 @@ public class XmlaHandler {
             throws OlapException
         {
             writer.startElement(
-                "Member", "Hierarchy", member.getHierarchy().getName());
+                "Member", "Hierarchy", member.getHierarchy().getUniqueName());
             for (final Property prop : props) {
                 Object value = null;
                 Property longProp = (longProps.get(prop.getName()) != null)
@@ -2336,7 +2346,7 @@ public class XmlaHandler {
         {
             writer.startElement(
                 "Member",
-                "Hierarchy", member.getHierarchy().getName());
+                "Hierarchy", member.getHierarchy().getUniqueName());
             for (Property prop : props) {
                 Object value;
                 Property longProp = longProps.get(prop.getName());

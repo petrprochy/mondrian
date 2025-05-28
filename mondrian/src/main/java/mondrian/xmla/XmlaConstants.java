@@ -36,6 +36,7 @@ public interface XmlaConstants {
     /* Namespaces for XML/A */
     public static final String NS_XMLA =
         "urn:schemas-microsoft-com:xml-analysis";
+    String NS_AS_ENGINE = "http://schemas.microsoft.com/analysisservices/2003/engine";
     public static final String NS_XMLA_MDDATASET =
         "urn:schemas-microsoft-com:xml-analysis:mddataset";
     public static final String NS_XMLA_EMPTY =

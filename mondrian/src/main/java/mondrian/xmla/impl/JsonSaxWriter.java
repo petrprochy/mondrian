@@ -144,7 +144,12 @@ class JsonSaxWriter implements SaxWriter {
     }
 
     public void characters(String data) {
-        throw new UnsupportedOperationException();
+        // TODO mixed element content with attributes. Is this behaviour correct?
+        if (stack.peek().ordinal > 0) {
+            textElement("text", data);
+        } else {
+            this.value(data);
+        }
     }
 
     public void textElement(String name, Object data) {

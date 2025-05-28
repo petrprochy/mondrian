@@ -55,26 +55,28 @@ where [Measures].[Unit Sales]
                         <CubeInfo>
                             <Cube>
                                 <CubeName>Sales</CubeName>
+                                <LastDataUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastDataUpdate>
+                                <LastSchemaUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastSchemaUpdate>
                             </Cube>
                         </CubeInfo>
                         <AxesInfo>
                             <AxisInfo name="Axis0">
-                                <HierarchyInfo name="Customers">
-                                    <UName name="[Customers].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Customers].[MEMBER_CAPTION]"/>
-                                    <LName name="[Customers].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Customers].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Customers].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Customers]">
+                                    <UName name="[Customers].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Customers].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Customers].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Customers].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Customers].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                     <PARENT_UNIQUE_NAME name="[Customers].[PARENT_UNIQUE_NAME]" type="xsd:string"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                             <AxisInfo name="SlicerAxis">
-                                <HierarchyInfo name="Measures">
-                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Measures].[MEMBER_CAPTION]"/>
-                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Measures].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Measures]">
+                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Measures].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Measures].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                         </AxesInfo>
@@ -88,7 +90,7 @@ where [Measures].[Unit Sales]
                         <Axis name="Axis0">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Customers">
+                                    <Member Hierarchy="[Customers]">
                                         <UName>[Customers].[All Customers]</UName>
                                         <Caption>All Customers</Caption>
                                         <LName>[Customers].[(All)]</LName>
@@ -97,7 +99,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Customers">
+                                    <Member Hierarchy="[Customers]">
                                         <UName>[Customers].[USA]</UName>
                                         <Caption>USA</Caption>
                                         <LName>[Customers].[Country]</LName>
@@ -107,7 +109,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Customers">
+                                    <Member Hierarchy="[Customers]">
                                         <UName>[Customers].[USA].[CA]</UName>
                                         <Caption>CA</Caption>
                                         <LName>[Customers].[State Province]</LName>
@@ -117,7 +119,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Customers">
+                                    <Member Hierarchy="[Customers]">
                                         <UName>[Customers].[USA].[CA].[Beverly Hills]</UName>
                                         <Caption>Beverly Hills</Caption>
                                         <LName>[Customers].[City]</LName>
@@ -131,7 +133,7 @@ where [Measures].[Unit Sales]
                         <Axis name="SlicerAxis">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Measures">
+                                    <Member Hierarchy="[Measures]">
                                         <UName>[Measures].[Unit Sales]</UName>
                                         <Caption>Unit Sales</Caption>
                                         <LName>[Measures].[MeasuresLevel]</LName>
@@ -381,41 +383,43 @@ where [Measures].[Unit Sales]
                         <CubeInfo>
                             <Cube>
                                 <CubeName>Sales</CubeName>
+                                <LastDataUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastDataUpdate>
+                                <LastSchemaUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastSchemaUpdate>
                             </Cube>
                         </CubeInfo>
                         <AxesInfo>
                             <AxisInfo name="Axis0">
-                                <HierarchyInfo name="Store">
-                                    <UName name="[Store].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Store].[MEMBER_CAPTION]"/>
-                                    <LName name="[Store].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Store].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Store].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Store]">
+                                    <UName name="[Store].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Store].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Store].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Store].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Store].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                     <PARENT_UNIQUE_NAME name="[Store].[PARENT_UNIQUE_NAME]" type="xsd:string"/>
-                                    <Store_x0020_Type name="[Store].[Store Type]" type="xsd:string"/>
-                                    <Store_x0020_Manager name="[Store].[Store Manager]" type="xsd:string"/>
-                                    <Store_x0020_Sqft name="[Store].[Store Sqft]" type="xsd:double"/>
-                                    <Grocery_x0020_Sqft name="[Store].[Grocery Sqft]" type="xsd:double"/>
-                                    <Frozen_x0020_Sqft name="[Store].[Frozen Sqft]" type="xsd:double"/>
-                                    <Meat_x0020_Sqft name="[Store].[Meat Sqft]" type="xsd:double"/>
-                                    <Has_x0020_coffee_x0020_bar name="[Store].[Has coffee bar]" type="xsd:boolean"/>
-                                    <Street_x0020_address name="[Store].[Street address]" type="xsd:string"/>
+                                    <Store_x0020_Type name="[Store].[Store Type]"/>
+                                    <Store_x0020_Manager name="[Store].[Store Manager]"/>
+                                    <Store_x0020_Sqft name="[Store].[Store Sqft]"/>
+                                    <Grocery_x0020_Sqft name="[Store].[Grocery Sqft]"/>
+                                    <Frozen_x0020_Sqft name="[Store].[Frozen Sqft]"/>
+                                    <Meat_x0020_Sqft name="[Store].[Meat Sqft]"/>
+                                    <Has_x0020_coffee_x0020_bar name="[Store].[Has coffee bar]"/>
+                                    <Street_x0020_address name="[Store].[Street address]"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                             <AxisInfo name="SlicerAxis">
-                                <HierarchyInfo name="Measures">
-                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Measures].[MEMBER_CAPTION]"/>
-                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Measures].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Measures]">
+                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Measures].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Measures].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                 </HierarchyInfo>
-                                <HierarchyInfo name="Gender">
-                                    <UName name="[Gender].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Gender].[MEMBER_CAPTION]"/>
-                                    <LName name="[Gender].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Gender].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Gender].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Gender]">
+                                    <UName name="[Gender].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Gender].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Gender].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Gender].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Gender].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                         </AxesInfo>
@@ -427,7 +431,7 @@ where [Measures].[Unit Sales]
                         <Axis name="Axis0">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[All Stores]</UName>
                                         <Caption>All Stores</Caption>
                                         <LName>[Store].[(All)]</LName>
@@ -436,7 +440,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA]</UName>
                                         <Caption>USA</Caption>
                                         <LName>[Store].[Store Country]</LName>
@@ -446,7 +450,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA]</UName>
                                         <Caption>CA</Caption>
                                         <LName>[Store].[Store State]</LName>
@@ -456,7 +460,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA].[Beverly Hills]</UName>
                                         <Caption>Beverly Hills</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -466,7 +470,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA].[Beverly Hills].[Store 6]</UName>
                                         <Caption>Store 6</Caption>
                                         <LName>[Store].[Store Name]</LName>
@@ -484,7 +488,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA].[Los Angeles]</UName>
                                         <Caption>Los Angeles</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -494,7 +498,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA].[Los Angeles].[Store 7]</UName>
                                         <Caption>Store 7</Caption>
                                         <LName>[Store].[Store Name]</LName>
@@ -512,7 +516,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA].[San Diego]</UName>
                                         <Caption>San Diego</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -522,7 +526,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[CA].[San Francisco]</UName>
                                         <Caption>San Francisco</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -532,7 +536,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[OR]</UName>
                                         <Caption>OR</Caption>
                                         <LName>[Store].[Store State]</LName>
@@ -542,7 +546,7 @@ where [Measures].[Unit Sales]
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA]</UName>
                                         <Caption>WA</Caption>
                                         <LName>[Store].[Store State]</LName>
@@ -556,14 +560,14 @@ where [Measures].[Unit Sales]
                         <Axis name="SlicerAxis">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Measures">
+                                    <Member Hierarchy="[Measures]">
                                         <UName>[Measures].[Customer Count]</UName>
                                         <Caption>Customer Count</Caption>
                                         <LName>[Measures].[MeasuresLevel]</LName>
                                         <LNum>0</LNum>
                                         <DisplayInfo>0</DisplayInfo>
                                     </Member>
-                                    <Member Hierarchy="Gender">
+                                    <Member Hierarchy="[Gender]">
                                         <UName>[Gender].[M]</UName>
                                         <Caption>M</Caption>
                                         <LName>[Gender].[Gender]</LName>
@@ -2000,16 +2004,18 @@ where [Measures].[Unit Sales]
                         <CubeInfo>
                             <Cube>
                                 <CubeName>Sales</CubeName>
+                                <LastDataUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastDataUpdate>
+                                <LastSchemaUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastSchemaUpdate>
                             </Cube>
                         </CubeInfo>
                         <AxesInfo>
                             <AxisInfo name="SlicerAxis">
-                                <HierarchyInfo name="Measures">
-                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Measures].[MEMBER_CAPTION]"/>
-                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Measures].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Measures]">
+                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Measures].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Measures].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                         </AxesInfo>
@@ -2026,7 +2032,7 @@ where [Measures].[Unit Sales]
                         <Axis name="SlicerAxis">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Measures">
+                                    <Member Hierarchy="[Measures]">
                                         <UName>[Measures].[Unit Sales]</UName>
                                         <Caption>Unit Sales</Caption>
                                         <LName>[Measures].[MeasuresLevel]</LName>
@@ -2091,34 +2097,36 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                         <CubeInfo>
                             <Cube>
                                 <CubeName>HR</CubeName>
+                                <LastDataUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastDataUpdate>
+                                <LastSchemaUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastSchemaUpdate>
                             </Cube>
                         </CubeInfo>
                         <AxesInfo>
                             <AxisInfo name="Axis0">
-                                <HierarchyInfo name="Store">
-                                    <UName name="[Store].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Store].[MEMBER_CAPTION]"/>
-                                    <LName name="[Store].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Store].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Store].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Store]">
+                                    <UName name="[Store].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Store].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Store].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Store].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Store].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                     <PARENT_UNIQUE_NAME name="[Store].[PARENT_UNIQUE_NAME]" type="xsd:string"/>
-                                    <Store_x0020_Type name="[Store].[Store Type]" type="xsd:string"/>
-                                    <Store_x0020_Manager name="[Store].[Store Manager]" type="xsd:string"/>
-                                    <Store_x0020_Sqft name="[Store].[Store Sqft]" type="xsd:double"/>
-                                    <Grocery_x0020_Sqft name="[Store].[Grocery Sqft]" type="xsd:double"/>
-                                    <Frozen_x0020_Sqft name="[Store].[Frozen Sqft]" type="xsd:double"/>
-                                    <Meat_x0020_Sqft name="[Store].[Meat Sqft]" type="xsd:double"/>
-                                    <Has_x0020_coffee_x0020_bar name="[Store].[Has coffee bar]" type="xsd:boolean"/>
-                                    <Street_x0020_address name="[Store].[Street address]" type="xsd:string"/>
+                                    <Store_x0020_Type name="[Store].[Store Type]"/>
+                                    <Store_x0020_Manager name="[Store].[Store Manager]"/>
+                                    <Store_x0020_Sqft name="[Store].[Store Sqft]"/>
+                                    <Grocery_x0020_Sqft name="[Store].[Grocery Sqft]"/>
+                                    <Frozen_x0020_Sqft name="[Store].[Frozen Sqft]"/>
+                                    <Meat_x0020_Sqft name="[Store].[Meat Sqft]"/>
+                                    <Has_x0020_coffee_x0020_bar name="[Store].[Has coffee bar]"/>
+                                    <Street_x0020_address name="[Store].[Street address]"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                             <AxisInfo name="SlicerAxis">
-                                <HierarchyInfo name="Measures">
-                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
-                                    <Caption name="[Measures].[MEMBER_CAPTION]"/>
-                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
-                                    <LNum name="[Measures].[LEVEL_NUMBER]"/>
-                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]"/>
+                                <HierarchyInfo name="[Measures]">
+                                    <UName name="[Measures].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+                                    <Caption name="[Measures].[MEMBER_CAPTION]" type="xsd:string"/>
+                                    <LName name="[Measures].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+                                    <LNum name="[Measures].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+                                    <DisplayInfo name="[Measures].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
                                 </HierarchyInfo>
                             </AxisInfo>
                         </AxesInfo>
@@ -2135,7 +2143,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                         <Axis name="Axis0">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[All Stores]</UName>
                                         <Caption>All Stores</Caption>
                                         <LName>[Store].[(All)]</LName>
@@ -2144,7 +2152,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA]</UName>
                                         <Caption>USA</Caption>
                                         <LName>[Store].[Store Country]</LName>
@@ -2154,7 +2162,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[OR]</UName>
                                         <Caption>OR</Caption>
                                         <LName>[Store].[Store State]</LName>
@@ -2164,7 +2172,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA]</UName>
                                         <Caption>WA</Caption>
                                         <LName>[Store].[Store State]</LName>
@@ -2174,7 +2182,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Bremerton]</UName>
                                         <Caption>Bremerton</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -2184,7 +2192,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Bremerton].[Store 3]</UName>
                                         <Caption>Store 3</Caption>
                                         <LName>[Store].[Store Name]</LName>
@@ -2202,7 +2210,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Seattle]</UName>
                                         <Caption>Seattle</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -2212,7 +2220,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Spokane]</UName>
                                         <Caption>Spokane</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -2222,7 +2230,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Tacoma]</UName>
                                         <Caption>Tacoma</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -2232,7 +2240,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Walla Walla]</UName>
                                         <Caption>Walla Walla</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -2242,7 +2250,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                                     </Member>
                                 </Tuple>
                                 <Tuple>
-                                    <Member Hierarchy="Store">
+                                    <Member Hierarchy="[Store]">
                                         <UName>[Store].[USA].[WA].[Yakima]</UName>
                                         <Caption>Yakima</Caption>
                                         <LName>[Store].[Store City]</LName>
@@ -2256,7 +2264,7 @@ WITH  SET [XL_Row_Dim_0] AS 'VisualTotals(Distinct(Hierarchize(
                         <Axis name="SlicerAxis">
                             <Tuples>
                                 <Tuple>
-                                    <Member Hierarchy="Measures">
+                                    <Member Hierarchy="[Measures]">
                                         <UName>[Measures].[Number of Employees]</UName>
                                         <Caption>Number of Employees</Caption>
                                         <LName>[Measures].[MeasuresLevel]</LName>

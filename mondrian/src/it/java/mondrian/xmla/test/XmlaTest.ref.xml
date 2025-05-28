@@ -425,34 +425,36 @@
         <CubeInfo>
           <Cube>
             <CubeName>HR</CubeName>
+            <LastDataUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastDataUpdate>
+            <LastSchemaUpdate xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">xxxx-xx-xxTxx:xx:xx</LastSchemaUpdate>
           </Cube>
         </CubeInfo>
         <AxesInfo>
           <AxisInfo name="Axis0">
-            <HierarchyInfo name="Measures">
-              <UName name="[Measures].[MEMBER_UNIQUE_NAME]"/>
-              <Caption name="[Measures].[MEMBER_CAPTION]"/>
-              <LName name="[Measures].[LEVEL_UNIQUE_NAME]"/>
-              <LNum name="[Measures].[LEVEL_NUMBER]"/>
-              <DisplayInfo name="[Measures].[DISPLAY_INFO]"/>
+            <HierarchyInfo name="[Measures]">
+              <UName name="[Measures].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+              <Caption name="[Measures].[MEMBER_CAPTION]" type="xsd:string"/>
+              <LName name="[Measures].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+              <LNum name="[Measures].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+              <DisplayInfo name="[Measures].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
             </HierarchyInfo>
           </AxisInfo>
           <AxisInfo name="Axis1">
-            <HierarchyInfo name="Employees">
-              <UName name="[Employees].[MEMBER_UNIQUE_NAME]"/>
-              <Caption name="[Employees].[MEMBER_CAPTION]"/>
-              <LName name="[Employees].[LEVEL_UNIQUE_NAME]"/>
-              <LNum name="[Employees].[LEVEL_NUMBER]"/>
-              <DisplayInfo name="[Employees].[DISPLAY_INFO]"/>
+            <HierarchyInfo name="[Employees]">
+              <UName name="[Employees].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+              <Caption name="[Employees].[MEMBER_CAPTION]" type="xsd:string"/>
+              <LName name="[Employees].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+              <LNum name="[Employees].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+              <DisplayInfo name="[Employees].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
             </HierarchyInfo>
           </AxisInfo>
           <AxisInfo name="SlicerAxis">
-            <HierarchyInfo name="Time">
-              <UName name="[Time].[MEMBER_UNIQUE_NAME]"/>
-              <Caption name="[Time].[MEMBER_CAPTION]"/>
-              <LName name="[Time].[LEVEL_UNIQUE_NAME]"/>
-              <LNum name="[Time].[LEVEL_NUMBER]"/>
-              <DisplayInfo name="[Time].[DISPLAY_INFO]"/>
+            <HierarchyInfo name="[Time]">
+              <UName name="[Time].[MEMBER_UNIQUE_NAME]" type="xsd:string"/>
+              <Caption name="[Time].[MEMBER_CAPTION]" type="xsd:string"/>
+              <LName name="[Time].[LEVEL_UNIQUE_NAME]" type="xsd:string"/>
+              <LNum name="[Time].[LEVEL_NUMBER]" type="xsd:unsignedInt"/>
+              <DisplayInfo name="[Time].[DISPLAY_INFO]" type="xsd:unsignedInt"/>
             </HierarchyInfo>
           </AxisInfo>
         </AxesInfo>
@@ -466,7 +468,7 @@
         <Axis name="Axis0">
           <Tuples>
             <Tuple>
-              <Member Hierarchy="Measures">
+              <Member Hierarchy="[Measures]">
                 <UName>[Measures].[Org Salary]</UName>
                 <Caption>Org Salary</Caption>
                 <LName>[Measures].[MeasuresLevel]</LName>
@@ -479,7 +481,7 @@
         <Axis name="Axis1">
           <Tuples>
             <Tuple>
-              <Member Hierarchy="Employees">
+              <Member Hierarchy="[Employees]">
                 <UName>[Employees].[All Employees]</UName>
                 <Caption>All Employees</Caption>
                 <LName>[Employees].[(All)]</LName>
@@ -488,7 +490,7 @@
               </Member>
             </Tuple>
             <Tuple>
-              <Member Hierarchy="Employees">
+              <Member Hierarchy="[Employees]">
                 <UName>[Employees].[Sheri Nowmer]</UName>
                 <Caption>Sheri Nowmer</Caption>
                 <LName>[Employees].[Employee Id]</LName>
@@ -501,7 +503,7 @@
         <Axis name="SlicerAxis">
           <Tuples>
             <Tuple>
-              <Member Hierarchy="Time">
+              <Member Hierarchy="[Time]">
                 <UName>[Time].[1997]</UName>
                 <Caption>1997</Caption>
                 <LName>[Time].[Year]</LName>

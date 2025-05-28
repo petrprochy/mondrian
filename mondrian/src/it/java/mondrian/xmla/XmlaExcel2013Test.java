@@ -134,4 +134,16 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
     public void test139MDSCHEMA_MEASUREGROUPS() {
         helperTest(true);
     }
+
+    public void test144Execute() {
+        helperTest(true);
+    }
+
+    public void test145Execute() {
+        helperTest(true);
+    }
+
+    public void test146Execute() {
+        helperTest(true);
+    }
 }
