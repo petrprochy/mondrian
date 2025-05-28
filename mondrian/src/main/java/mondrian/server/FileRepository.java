@@ -34,15 +34,7 @@ import org.olap4j.OlapWrapper;
 import org.olap4j.impl.Olap4jUtil;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.WeakHashMap;
+import java.util.*;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -348,14 +340,9 @@ public class FileRepository implements Repository {
         String databaseName,
         String catalogName)
     {
-        final RolapSchema schema =
-            getServerInfo()
-                .datasourceMap.get(databaseName)
-                    .catalogMap.get(catalogName)
-                        .getRolapSchema();
-        return Collections.singletonMap(
-            schema.getName(),
-            schema);
+        final CatalogInfo catalogInfo = getServerInfo().datasourceMap.get(databaseName).catalogMap.get(catalogName);
+        final RolapSchema schema = catalogInfo.getRolapSchema(connection != null ? connection.getLocale() : null);
+        return Collections.singletonMap(schema.getName(), schema);
     }
 
     @Override protected void finalize() throws Throwable {
@@ -411,13 +398,14 @@ public class FileRepository implements Repository {
                     : "jdbc:mondrian:" + connectString;
         }
 
-        private RolapSchema getRolapSchema() {
+        private RolapSchema getRolapSchema(Locale locale) {
             RolapConnection rolapConnection = null;
             try {
-                rolapConnection =
-                    (RolapConnection)
-                        DriverManager.getConnection(
-                            connectString, this.locator);
+                final PropertyList pl = Util.parseConnectString(this.connectString);
+                if (locale != null) {
+                    pl.put(RolapConnectionProperties.Locale.name(), locale.toString());
+                }
+                rolapConnection = (RolapConnection) DriverManager.getConnection(pl, this.locator);
                 return rolapConnection.getSchema();
             } finally {
                 if (rolapConnection != null) {

@@ -179,6 +179,7 @@ import mondrian.util.ScheduleTest;
 import mondrian.xmla.XmlaBasicTest;
 import mondrian.xmla.XmlaCognosTest;
 import mondrian.xmla.XmlaDimensionPropertiesTest;
+import mondrian.xmla.XmlaDynamicProcessorTest;
 import mondrian.xmla.XmlaErrorTest;
 import mondrian.xmla.XmlaExcel2000Test;
 import mondrian.xmla.XmlaExcel2007Test;
@@ -365,6 +366,7 @@ public class Main extends TestSuite {
       addTest( suite, DynamicDatasourceXmlaServletTest.class );
       addTest( suite, XmlaTest.class, "suite" );
       addTest( suite, XmlaDimensionPropertiesTest.class );
+      addTest( suite, XmlaDynamicProcessorTest.class );
       if ( isRunOnce() ) {
         addTest( suite, TestCalculatedMembers.class );
       }

@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <Schema name="FoodMart">
+  <Annotations>
+    <Annotation name="lang">%{lang}</Annotation>
+  </Annotations>
 <!--
   == This software is subject to the terms of the Eclipse Public License v1.0
   == Agreement, available at the following URL:

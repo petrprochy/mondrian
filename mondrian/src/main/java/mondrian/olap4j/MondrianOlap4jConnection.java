@@ -540,7 +540,7 @@ public abstract class MondrianOlap4jConnection implements OlapConnection {
     {
         MondrianOlap4jSchema olap4jSchema = schemaMap.get(schema);
         if (olap4jSchema == null) {
-            throw new RuntimeException("schema not registered: " + schema);
+            throw new RuntimeException("schema not registered: " + schema.getName());
         }
         return olap4jSchema;
     }
