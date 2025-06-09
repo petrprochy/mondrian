@@ -276,8 +276,6 @@ public class DefaultXmlaRequest
                     Element e = (Element) n;
                     if (NS_XMLA.equals(e.getNamespaceURI())) {
                         String key = e.getLocalName();
-                        String value = XmlaUtil.textInElement(e);
-
                         List<String> values;
                         if (restrictions.containsKey(key)) {
                             values = restrictions.get(key);
@@ -286,17 +284,28 @@ public class DefaultXmlaRequest
                             restrictions.put(key, values);
                         }
 
-                        if (LOGGER.isDebugEnabled()) {
-                            LOGGER.debug(
-                                "DefaultXmlaRequest.initRestrictions: "
-                                + " key=\""
-                                + key
-                                + "\", value=\""
-                                + value
-                                + "\"");
+                        final NodeList propertyValues = e.getElementsByTagNameNS(NS_XMLA, "Value");
+                        if (propertyValues.getLength() == 0) {
+                            final String value = XmlaUtil.textInElement(e);
+                            values.add(value);
+                            if (LOGGER.isDebugEnabled()) {
+                                LOGGER.debug(
+                                    "DefaultXmlaRequest.initRestrictions:  key=\"{}\", value=\"{}\"",
+                                    key, value);
+                            }
+                        } else {
+                            for (int l = propertyValues.getLength(), j = 0; j < l; ++j) {
+                                String value;
+                                final Node vn = propertyValues.item(j);
+                                value = XmlaUtil.textInElement((Element) vn);
+                                if (LOGGER.isDebugEnabled()) {
+                                    LOGGER.debug(
+                                        "DefaultXmlaRequest.initRestrictions:  key=\"{}\", value=\"{}\"",
+                                        key, value);
+                                }
+                                values.add(value);
+                            }
                         }
-
-                        values.add(value);
                     }
                 }
             }
