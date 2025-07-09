@@ -155,6 +155,8 @@ class MondrianServerVersion {
     static final String VERSION = "${project.version}";
     static final int MAJOR_VERSION = ${project.version.major};
     static final int MINOR_VERSION = ${project.version.minor};
+    static final int BUILD_NUMBER = ${project.version.build};
+    static final int REVISION_NUMBER = ${project.version.revision};
     static final int SCHEMA_VERSION = ${schema.version};
     static final String COPYRIGHT_YEAR = "${copyright.year}";
 }

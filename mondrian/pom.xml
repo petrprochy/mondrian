@@ -12,9 +12,11 @@
   <description>Mondrian OLAP Engine</description>
   <url>http://mondrian.pentaho.com</url>
   <properties>
-    <project.version.minor>000</project.version.minor>
+    <project.version.major>10</project.version.major>
+    <project.version.minor>50</project.version.minor>
+    <project.version.build>1600</project.version.build>
+    <project.version.revision>1</project.version.revision>
     <driver.version>${project.version}</driver.version>
-    <project.version.major>8</project.version.major>
     <schema.version>3</schema.version>
     <driver.name>Mondrian olap4j driver</driver.name>
     <driver.version.minor>${project.version.minor}</driver.version.minor>
