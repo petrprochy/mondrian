@@ -1341,6 +1341,18 @@
                             <Name>PROPERTY_CONTENT_TYPE</Name>
                             <Type>xsd:short</Type>
                         </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_ORIGIN</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_SOURCE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
                         <Description/>
                     </row>
                     <row>
@@ -5631,11 +5643,9 @@
                                 <xsd:element name="PROPERTY_NAME" sql:field="PROPERTY_NAME" type="xsd:string"/>
                                 <xsd:element name="PROPERTY_CAPTION" sql:field="PROPERTY_CAPTION" type="xsd:string"/>
                                 <xsd:element name="DATA_TYPE" sql:field="DATA_TYPE" type="xsd:unsignedShort"/>
-                                <xsd:element minOccurs="0" name="PROPERTY_CONTENT_TYPE" sql:field="PROPERTY_CONTENT_TYPE" type="xsd:short"/>
                                 <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="PROPERTY_CONTENT_TYPE" sql:field="PROPERTY_CONTENT_TYPE" type="xsd:short"/>
                                 <xsd:element minOccurs="0" name="PROPERTY_ORIGIN" sql:field="PROPERTY_ORIGIN" type="xsd:unsignedShort"/>
-                                <xsd:element minOccurs="0" name="CUBE_SOURCE" sql:field="CUBE_SOURCE" type="xsd:unsignedShort"/>
-                                <xsd:element minOccurs="0" name="PROPERTY_VISIBILITY" sql:field="PROPERTY_VISIBILITY" type="xsd:unsignedShort"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:schema>
@@ -5650,10 +5660,8 @@
                         <PROPERTY_NAME>Gender</PROPERTY_NAME>
                         <PROPERTY_CAPTION>Gender</PROPERTY_CAPTION>
                         <DATA_TYPE>130</DATA_TYPE>
-                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - Name Level - Gender Property</DESCRIPTION>
-                        <CUBE_SOURCE>2</CUBE_SOURCE>
-                        <PROPERTY_VISIBILITY>1</PROPERTY_VISIBILITY>
+                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -5666,10 +5674,8 @@
                         <PROPERTY_NAME>Marital Status</PROPERTY_NAME>
                         <PROPERTY_CAPTION>Marital Status</PROPERTY_CAPTION>
                         <DATA_TYPE>130</DATA_TYPE>
-                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - Name Level - Marital Status Property</DESCRIPTION>
-                        <CUBE_SOURCE>2</CUBE_SOURCE>
-                        <PROPERTY_VISIBILITY>1</PROPERTY_VISIBILITY>
+                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -5682,10 +5688,8 @@
                         <PROPERTY_NAME>Education</PROPERTY_NAME>
                         <PROPERTY_CAPTION>Education</PROPERTY_CAPTION>
                         <DATA_TYPE>130</DATA_TYPE>
-                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - Name Level - Education Property</DESCRIPTION>
-                        <CUBE_SOURCE>2</CUBE_SOURCE>
-                        <PROPERTY_VISIBILITY>1</PROPERTY_VISIBILITY>
+                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -5698,10 +5702,8 @@
                         <PROPERTY_NAME>Yearly Income</PROPERTY_NAME>
                         <PROPERTY_CAPTION>Yearly Income</PROPERTY_CAPTION>
                         <DATA_TYPE>130</DATA_TYPE>
-                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - Name Level - Yearly Income Property</DESCRIPTION>
-                        <CUBE_SOURCE>2</CUBE_SOURCE>
-                        <PROPERTY_VISIBILITY>1</PROPERTY_VISIBILITY>
+                        <PROPERTY_CONTENT_TYPE>0</PROPERTY_CONTENT_TYPE>
                     </row>
                 </root>
             </cxmla:return>

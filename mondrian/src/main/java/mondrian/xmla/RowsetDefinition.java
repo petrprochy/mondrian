@@ -1047,17 +1047,40 @@ public enum RowsetDefinition {
             MdschemaPropertiesRowset.HierarchyUniqueName,
             MdschemaPropertiesRowset.LevelUniqueName,
             MdschemaPropertiesRowset.MemberUniqueName,
+            MdschemaPropertiesRowset.PropertyType,
             MdschemaPropertiesRowset.PropertyName,
             MdschemaPropertiesRowset.PropertyCaption,
-            MdschemaPropertiesRowset.PropertyType,
             MdschemaPropertiesRowset.DataType,
+            MdschemaPropertiesRowset.Description,
             MdschemaPropertiesRowset.PropertyContentType,
-            MdschemaPropertiesRowset.Description
+            MdschemaPropertiesRowset.PropertyOrigin,
         },
         null /* not sorted */)
     {
         public Rowset getRowset(XmlaRequest request, XmlaHandler handler) {
             return new MdschemaPropertiesRowset(request, handler);
+        }
+
+        @Override
+        Column[] getRestrictionColumns() {
+            return onlyRestriction(Stream.of(
+                MdschemaPropertiesRowset.CatalogName,
+                MdschemaPropertiesRowset.SchemaName,
+                MdschemaPropertiesRowset.CubeName,
+                MdschemaPropertiesRowset.DimensionUniqueName,
+                MdschemaPropertiesRowset.HierarchyUniqueName,
+                MdschemaPropertiesRowset.LevelUniqueName,
+                MdschemaPropertiesRowset.MemberUniqueName,
+                MdschemaPropertiesRowset.PropertyName,
+                MdschemaPropertiesRowset.PropertyType,
+                MdschemaPropertiesRowset.PropertyContentType,
+                MdschemaPropertiesRowset.PropertyCaption,
+                MdschemaPropertiesRowset.DataType,
+                MdschemaPropertiesRowset.Description,
+                MdschemaPropertiesRowset.PropertyOrigin,
+                MdschemaPropertiesRowset.CubeSource,
+                MdschemaPropertiesRowset.PropertyVisibility
+            ));
         }
     },
 
@@ -6279,6 +6302,27 @@ TODO: see above
                 Column.NOT_RESTRICTION,
                 Column.OPTIONAL,
                 "A human-readable description of the measure.");
+        private static final Column PropertyOrigin = new Column(
+                "PROPERTY_ORIGIN",
+                Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A default restriction is in place on MD_USER_DEFINED OR MD_SYSTEM_ENABLED.");
+        private static final Column CubeSource = new Column(
+                "CUBE_SOURCE",
+                Type.UnsignedShort,
+                null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of the following valid values:\n1 CUBE\n2 DIMENSION\nDefault restriction is a value of 1.");
+        private static final Column PropertyVisibility = new Column(
+                "PROPERTY_VISIBILITY",
+                Type.UnsignedShort,
+                (Enumeration) null,
+                Column.RESTRICTION,
+                Column.OPTIONAL,
+                "A bitmap with one of the following valid values:\n1 Visible\n2 Not visible\nDefault restriction is a value of 1.");
 
         protected boolean needConnection() {
             return false;

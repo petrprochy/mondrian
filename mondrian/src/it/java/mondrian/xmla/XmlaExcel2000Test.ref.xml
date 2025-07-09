@@ -646,6 +646,18 @@
                             <Name>PROPERTY_CONTENT_TYPE</Name>
                             <Type>xsd:short</Type>
                         </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_ORIGIN</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_SOURCE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
                         <Description/>
                     </row>
                     <row>
@@ -3459,6 +3471,18 @@
                         <Restrictions>
                             <Name>PROPERTY_CONTENT_TYPE</Name>
                             <Type>xsd:short</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_ORIGIN</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_SOURCE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>PROPERTY_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
                         </Restrictions>
                         <Description/>
                     </row>
