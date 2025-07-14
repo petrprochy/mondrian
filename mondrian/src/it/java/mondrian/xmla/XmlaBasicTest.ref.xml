@@ -571,6 +571,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Measures Hierarchy - MeasuresLevel Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -633,6 +634,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Time Hierarchy - Year Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -650,6 +652,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Time Hierarchy - Quarter Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -667,6 +670,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Time Hierarchy - Month Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -730,6 +734,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Hierarchy - (All) Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -747,6 +752,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Hierarchy - Store Country Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -764,6 +770,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Hierarchy - Store State Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -781,6 +788,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Hierarchy - Store City Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -798,6 +806,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Hierarchy - Store Name Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -861,6 +870,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Pay Type Hierarchy - (All) Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -878,6 +888,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Pay Type Hierarchy - Pay Type Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -941,6 +952,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Type Hierarchy - (All) Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -958,6 +970,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Store Type Hierarchy - Store Type Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -1021,6 +1034,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Position Hierarchy - (All) Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -1038,6 +1052,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Position Hierarchy - Management Role Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -1055,6 +1070,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Position Hierarchy - Position Title Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -1118,6 +1134,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Department Hierarchy - (All) Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -1135,6 +1152,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Department Hierarchy - Department Description Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -1198,6 +1216,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Employees Hierarchy - (All) Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                             <row>
                                                 <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -1215,6 +1234,7 @@
                                                 <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                                                 <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                                                 <DESCRIPTION>HR Cube - Employees Hierarchy - Employee Id Level</DESCRIPTION>
+                                                <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                                             </row>
                                         </LEVELS>
                                     </row>
@@ -1421,10 +1441,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 5,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Measures Hierarchy - MeasuresLevel Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 0,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Measures Hierarchy - MeasuresLevel Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -1483,10 +1504,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 2,
                       "LEVEL_TYPE": 20,
+                      "DESCRIPTION": "HR Cube - Time Hierarchy - Year Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Time Hierarchy - Year Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1500,10 +1522,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 8,
                       "LEVEL_TYPE": 68,
+                      "DESCRIPTION": "HR Cube - Time Hierarchy - Quarter Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 0,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Time Hierarchy - Quarter Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1517,10 +1540,11 @@
                       "LEVEL_NUMBER": 2,
                       "LEVEL_CARDINALITY": 24,
                       "LEVEL_TYPE": 132,
+                      "DESCRIPTION": "HR Cube - Time Hierarchy - Month Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 0,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Time Hierarchy - Month Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -1580,10 +1604,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 1,
                       "LEVEL_TYPE": 1,
+                      "DESCRIPTION": "HR Cube - Store Hierarchy - (All) Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 3,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Hierarchy - (All) Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1597,10 +1622,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 3,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store Country Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store Country Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1614,10 +1640,11 @@
                       "LEVEL_NUMBER": 2,
                       "LEVEL_CARDINALITY": 10,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store State Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store State Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1631,10 +1658,11 @@
                       "LEVEL_NUMBER": 3,
                       "LEVEL_CARDINALITY": 24,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store City Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 0,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store City Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1648,10 +1676,11 @@
                       "LEVEL_NUMBER": 4,
                       "LEVEL_CARDINALITY": 25,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store Name Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Hierarchy - Store Name Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -1711,10 +1740,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 1,
                       "LEVEL_TYPE": 1,
+                      "DESCRIPTION": "HR Cube - Pay Type Hierarchy - (All) Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 3,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Pay Type Hierarchy - (All) Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1728,10 +1758,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 2,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Pay Type Hierarchy - Pay Type Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Pay Type Hierarchy - Pay Type Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -1791,10 +1822,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 1,
                       "LEVEL_TYPE": 1,
+                      "DESCRIPTION": "HR Cube - Store Type Hierarchy - (All) Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 3,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Type Hierarchy - (All) Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1808,10 +1840,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 6,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Store Type Hierarchy - Store Type Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Store Type Hierarchy - Store Type Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -1871,10 +1904,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 1,
                       "LEVEL_TYPE": 1,
+                      "DESCRIPTION": "HR Cube - Position Hierarchy - (All) Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 3,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Position Hierarchy - (All) Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1888,10 +1922,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 5,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Position Hierarchy - Management Role Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Position Hierarchy - Management Role Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1905,10 +1940,11 @@
                       "LEVEL_NUMBER": 2,
                       "LEVEL_CARDINALITY": 18,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Position Hierarchy - Position Title Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 0,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Position Hierarchy - Position Title Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -1968,10 +2004,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 1,
                       "LEVEL_TYPE": 1,
+                      "DESCRIPTION": "HR Cube - Department Hierarchy - (All) Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 3,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Department Hierarchy - (All) Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -1985,10 +2022,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 12,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Department Hierarchy - Department Description Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Department Hierarchy - Department Description Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -2048,10 +2086,11 @@
                       "LEVEL_NUMBER": 0,
                       "LEVEL_CARDINALITY": 1,
                       "LEVEL_TYPE": 1,
+                      "DESCRIPTION": "HR Cube - Employees Hierarchy - (All) Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 3,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Employees Hierarchy - (All) Level"
+                      "LEVEL_ORIGIN": 0
                     },
                     {
                       "CATALOG_NAME": "FoodMart",
@@ -2065,10 +2104,11 @@
                       "LEVEL_NUMBER": 1,
                       "LEVEL_CARDINALITY": 1155,
                       "LEVEL_TYPE": 0,
+                      "DESCRIPTION": "HR Cube - Employees Hierarchy - Employee Id Level",
                       "CUSTOM_ROLLUP_SETTINGS": 0,
                       "LEVEL_UNIQUE_SETTINGS": 1,
                       "LEVEL_IS_VISIBLE": true,
-                      "DESCRIPTION": "HR Cube - Employees Hierarchy - Employee Id Level"
+                      "LEVEL_ORIGIN": 0
                     }
                   ]
                 }
@@ -9959,10 +9999,11 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                                 <xsd:element name="LEVEL_NUMBER" sql:field="LEVEL_NUMBER" type="xsd:unsignedInt"/>
                                 <xsd:element name="LEVEL_CARDINALITY" sql:field="LEVEL_CARDINALITY" type="xsd:unsignedInt"/>
                                 <xsd:element name="LEVEL_TYPE" sql:field="LEVEL_TYPE" type="xsd:int"/>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
                                 <xsd:element name="CUSTOM_ROLLUP_SETTINGS" sql:field="CUSTOM_ROLLUP_SETTINGS" type="xsd:int"/>
                                 <xsd:element name="LEVEL_UNIQUE_SETTINGS" sql:field="LEVEL_UNIQUE_SETTINGS" type="xsd:int"/>
                                 <xsd:element name="LEVEL_IS_VISIBLE" sql:field="LEVEL_IS_VISIBLE" type="xsd:boolean"/>
-                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="LEVEL_ORIGIN" sql:field="LEVEL_ORIGIN" type="xsd:unsignedShort"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:schema>
@@ -9982,6 +10023,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - (All) Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -9999,6 +10041,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - Country Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -10016,6 +10059,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - State Province Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -10033,6 +10077,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - City Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -10050,6 +10095,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - Name Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                 </root>
             </cxmla:return>
@@ -10124,10 +10170,11 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                                 <xsd:element name="LEVEL_NUMBER" sql:field="LEVEL_NUMBER" type="xsd:unsignedInt"/>
                                 <xsd:element name="LEVEL_CARDINALITY" sql:field="LEVEL_CARDINALITY" type="xsd:unsignedInt"/>
                                 <xsd:element name="LEVEL_TYPE" sql:field="LEVEL_TYPE" type="xsd:int"/>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
                                 <xsd:element name="CUSTOM_ROLLUP_SETTINGS" sql:field="CUSTOM_ROLLUP_SETTINGS" type="xsd:int"/>
                                 <xsd:element name="LEVEL_UNIQUE_SETTINGS" sql:field="LEVEL_UNIQUE_SETTINGS" type="xsd:int"/>
                                 <xsd:element name="LEVEL_IS_VISIBLE" sql:field="LEVEL_IS_VISIBLE" type="xsd:boolean"/>
-                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="LEVEL_ORIGIN" sql:field="LEVEL_ORIGIN" type="xsd:unsignedShort"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:schema>
@@ -10147,6 +10194,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - State Province Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -10164,6 +10212,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>0</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Customers Hierarchy - City Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                 </root>
             </cxmla:return>
@@ -13785,6 +13834,18 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                             <Name>LEVEL_UNIQUE_NAME</Name>
                             <Type>xsd:string</Type>
                         </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_ORIGIN</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>CUBE_SOURCE</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
+                        <Restrictions>
+                            <Name>LEVEL_VISIBILITY</Name>
+                            <Type>xsd:unsignedShort</Type>
+                        </Restrictions>
                         <Description/>
                     </row>
                     <row>
@@ -14184,10 +14245,11 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                                 <xsd:element name="LEVEL_NUMBER" sql:field="LEVEL_NUMBER" type="xsd:unsignedInt"/>
                                 <xsd:element name="LEVEL_CARDINALITY" sql:field="LEVEL_CARDINALITY" type="xsd:unsignedInt"/>
                                 <xsd:element name="LEVEL_TYPE" sql:field="LEVEL_TYPE" type="xsd:int"/>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
                                 <xsd:element name="CUSTOM_ROLLUP_SETTINGS" sql:field="CUSTOM_ROLLUP_SETTINGS" type="xsd:int"/>
                                 <xsd:element name="LEVEL_UNIQUE_SETTINGS" sql:field="LEVEL_UNIQUE_SETTINGS" type="xsd:int"/>
                                 <xsd:element name="LEVEL_IS_VISIBLE" sql:field="LEVEL_IS_VISIBLE" type="xsd:boolean"/>
-                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="LEVEL_ORIGIN" sql:field="LEVEL_ORIGIN" type="xsd:unsignedShort"/>
                             </xsd:sequence>
                         </xsd:complexType>
                     </xsd:schema>
@@ -14207,6 +14269,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>3</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Marital Status Hierarchy - (All) Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                     <row>
                         <CATALOG_NAME>FoodMart</CATALOG_NAME>
@@ -14224,6 +14287,7 @@ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
                         <LEVEL_UNIQUE_SETTINGS>1</LEVEL_UNIQUE_SETTINGS>
                         <LEVEL_IS_VISIBLE>true</LEVEL_IS_VISIBLE>
                         <DESCRIPTION>Sales Cube - Marital Status Hierarchy - Marital Status Level</DESCRIPTION>
+                        <LEVEL_ORIGIN>0</LEVEL_ORIGIN>
                     </row>
                 </root>
             </cxmla:return>
