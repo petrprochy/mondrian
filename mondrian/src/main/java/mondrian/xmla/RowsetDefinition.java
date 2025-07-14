@@ -1121,6 +1121,11 @@ public enum RowsetDefinition {
             MdschemaSetsRowset.CubeName,
             MdschemaSetsRowset.SetName,
             MdschemaSetsRowset.Scope,
+            MdschemaSetsRowset.Description,
+            MdschemaSetsRowset.Expression,
+            MdschemaSetsRowset.Dimensions,
+            MdschemaSetsRowset.SetCaption,
+            MdschemaSetsRowset.DisplayFolder,
         },
         new Column[] {
             MdschemaSetsRowset.CatalogName,
@@ -6068,7 +6073,7 @@ TODO: see above
                 "SET_CAPTION",
                 Type.String,
                 null,
-                true,
+                false,
                 true,
                 null);
         private static final Column Scope =
@@ -6084,9 +6089,37 @@ TODO: see above
                 "DESCRIPTION",
                 Type.String,
                 null,
-                false,
-                true,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
                 "A human-readable description of the measure.");
+        private static final Column Expression = new Column(
+                "EXPRESSION",
+                Type.String,
+                null,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
+                "The expression for the set.");
+        private static final Column Dimensions = new Column(
+                "DIMENSIONS",
+                Type.String,
+                null,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
+                "A comma delimited list of hierarchies included in the set.");
+        private static final Column DisplayFolder = new Column(
+                "SET_DISPLAY_FOLDER",
+                Type.String,
+                null,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
+                "A string that identifies the path of the display folder that the client application uses to show the set. The folder level separator is defined by the client application. For the tools and clients supplied by Analysis Services, the backslash (\\) is the level separator. To provide multiple display folders, use a semicolon (;) to separate the folders.");
+        private static final Column EvaluationContext = new Column(
+                "SET_EVALUATION_CONTEXT",
+                Type.Integer,
+                null,
+                Column.NOT_RESTRICTION,
+                Column.OPTIONAL,
+                "The context for the set. The set can be static or dynamic.\nThis column can have one of the following values:\nMDSET_RESOLUTION_STATIC=1\nMDSET_RESOLUTION_DYNAMIC=2");
 
         public void populateImpl(
             XmlaResponse response,

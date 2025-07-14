@@ -40,6 +40,7 @@ public class Olap4jTckTest extends TestCase {
                     "testDatabaseMetaDataGetHierarchies",
                     "testDatabaseMetaDataGetProperties",
                     "testDatabaseMetaDataGetLevels",
+                    "testDatabaseMetaDataGetSets",
                 };
                 final TestCase testCase = (TestCase) test;
                 final String testCaseName = testCase.getName();

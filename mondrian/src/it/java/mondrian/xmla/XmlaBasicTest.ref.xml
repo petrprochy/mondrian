@@ -2263,7 +2263,11 @@
                                 <xsd:element name="CUBE_NAME" sql:field="CUBE_NAME" type="xsd:string"/>
                                 <xsd:element name="SET_NAME" sql:field="SET_NAME" type="xsd:string"/>
                                 <xsd:element name="SCOPE" sql:field="SCOPE" type="xsd:int"/>
-                            </xsd:sequence>
+                                <xsd:element minOccurs="0" name="DESCRIPTION" sql:field="DESCRIPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="EXPRESSION" sql:field="EXPRESSION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="DIMENSIONS" sql:field="DIMENSIONS" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="SET_CAPTION" sql:field="SET_CAPTION" type="xsd:string"/>
+                                <xsd:element minOccurs="0" name="SET_DISPLAY_FOLDER" sql:field="SET_DISPLAY_FOLDER" type="xsd:string"/>                            </xsd:sequence>
                         </xsd:complexType>
                     </xsd:schema>
                     <row>
