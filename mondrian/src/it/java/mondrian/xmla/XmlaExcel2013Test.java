@@ -115,6 +115,10 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
     }
 
 
+    public void test128MDSCHEMA_DIMENSIONS() {
+        helperTest(true);
+    }
+
     public void test129DISCOVER_SCHEMA_ROWSETS() {
         helperTest(true);
     }
@@ -135,6 +139,10 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
         helperTest(true);
     }
 
+    public void test140MDSCHEMA_HIERARCHIES() {
+        helperTest(true);
+    }
+
     public void test144Execute() {
         helperTest(true);
     }
@@ -144,6 +152,10 @@ public class XmlaExcel2013Test extends XmlaBaseTestCase {
     }
 
     public void test146Execute() {
+        helperTest(true);
+    }
+
+    public void test150MDSCHEMA_PROPERTIES() {
         helperTest(true);
     }
 }
