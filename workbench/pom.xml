@@ -4,10 +4,10 @@
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-mondrian-parent-pom</artifactId>
-    <version>9.4.0.0-343-2</version>
+    <version>9.4.0.0-343-3-SNAPSHOT</version>
   </parent>
   <artifactId>workbench</artifactId>
-  <version>9.4.0.0-343-2</version>
+  <version>9.4.0.0-343-3-SNAPSHOT</version>
   <name>Pentaho Community Edition Project: ${project.artifactId}</name>
   <description>Mondrian Schema Workbench</description>
   <url>http://mondrian.pentaho.com</url>
