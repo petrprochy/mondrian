@@ -4,10 +4,10 @@
   <parent>
     <groupId>pentaho</groupId>
     <artifactId>pentaho-mondrian-assemblies</artifactId>
-    <version>9.4.0.0-343-2-SNAPSHOT</version>
+    <version>9.4.0.0-343-2</version>
   </parent>
   <artifactId>psw-ce</artifactId>
-  <version>9.4.0.0-343-2-SNAPSHOT</version>
+  <version>9.4.0.0-343-2</version>
   <packaging>pom</packaging>
   <name>Pentaho Schema Workbench - CE</name>
   <description>Mondrian Schema Workbench</description>
