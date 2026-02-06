@@ -930,10 +930,7 @@ public class DrillThroughTest extends FoodMartTestCase {
            result.getCell(new int[]{0, 0}).getDrillThroughSQL(true);
 
        testContext.assertSqlEquals(
-         "select store.frozen_sqft as Frozen sqft, store.grocery_sqft as Grocery sqft, store.meat_sqft as Meat sqft, store.store_sqft as Store sqft, store.store_sqft as Store sqft_0"
-           + " from foodmart.store as store"
-           + " where store.frozen_sqft = 2452"
-           + " order by store.frozen_sqft ASC, store.grocery_sqft ASC, store.meat_sqft ASC, store.store_sqft ASC",
+           "select store.frozen_sqft as Frozen sqft, store.grocery_sqft as Grocery sqft, store.meat_sqft as Meat sqft, store.store_sqft as Store sqft, store.store_sqft as Store sqft_0 from foodmart.store as store where store.frozen_sqft = 2452 order by Frozen sqft ASC, Grocery sqft ASC, Meat sqft ASC, Store sqft ASC",
            sql,
            1);
    }

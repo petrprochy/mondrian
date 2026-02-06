@@ -395,9 +395,7 @@ public class DialectTest extends TestCase {
         // Impala
         "(?s).*Encountered: EOF.*Expected: IDENTIFIER.*",
         // Vertica 6
-        "(?s).*ERROR: Subquery in FROM must have an alias.*",
-        // Mariadb v10.11
-        "You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1"
+        "(?s).*ERROR: Subquery in FROM must have an alias.*"
       };
       assertQueryFails( sql, errs );
     } else {
