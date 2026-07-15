@@ -13360,6 +13360,52 @@ Intel platforms):
         + "Axis #1:\n"
         + "{[Measures].[*CALCULATED_MEASURE_1]}\n"
         + "Row #0: {[Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Product].[Food].[Eggs].[Eggs]}\n" );
+
+    assertQueryReturns(
+      "with member [Measures].[*CALCULATED_MEASURE_1] as 'SetToStr((Existing [Product].[Product Category].Members))'\n" +
+        "select {[Measures].[*CALCULATED_MEASURE_1]} ON COLUMNS\n" +
+        "from [Sales]\n" +
+        "where Crossjoin(" +
+        "{[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Beer], " +
+        "[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Wine]," +
+        "[Product].[Food].[Eggs].[Eggs]}," +
+        "{[Store].[Canada].[BC].[Vancouver], " +
+        "[Store].[USA].[WA]})",
+      "Axis #0:\n" +
+        "{[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Beer], [Store].[Canada].[BC].[Vancouver]}\n" +
+        "{[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Beer], [Store].[USA].[WA]}\n" +
+        "{[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Wine], [Store].[Canada].[BC].[Vancouver]}\n" +
+        "{[Product].[Drink].[Alcoholic Beverages].[Beer and Wine].[Wine], [Store].[USA].[WA]}\n" +
+        "{[Product].[Food].[Eggs].[Eggs], [Store].[Canada].[BC].[Vancouver]}\n" +
+        "{[Product].[Food].[Eggs].[Eggs], [Store].[USA].[WA]}\n" +
+        "Axis #1:\n" +
+        "{[Measures].[*CALCULATED_MEASURE_1]}\n" +
+        "Row #0: {[Product].[Drink].[Alcoholic Beverages].[Beer and Wine], [Product].[Food].[Eggs].[Eggs]}\n");
+
+    assertQueryReturns(
+      "with member [Measures].[Store Sales LM] as 'Sum((Existing [Time].[Month].Members), (ParallelPeriod([Time].[Month]), [Measures].[Store Sales]))'\n" +
+        "select NON EMPTY {[Measures].[Store Sales], [Measures].[Store Sales LM]} ON COLUMNS,\n" +
+        "  NON EMPTY [Time].[1997].[Q4].Children ON ROWS\n" +
+        "from [Sales]\n" +
+        "where Crossjoin({[Gender].[F], [Gender].[M]}, {[Promotion Media].[Daily Paper, Radio], [Promotion Media].[Daily Paper, Radio, TV]})\n",
+      "Axis #0:\n" +
+        "{[Gender].[F], [Promotion Media].[Daily Paper, Radio]}\n" +
+        "{[Gender].[F], [Promotion Media].[Daily Paper, Radio, TV]}\n" +
+        "{[Gender].[M], [Promotion Media].[Daily Paper, Radio]}\n" +
+        "{[Gender].[M], [Promotion Media].[Daily Paper, Radio, TV]}\n" +
+        "Axis #1:\n" +
+        "{[Measures].[Store Sales]}\n" +
+        "{[Measures].[Store Sales LM]}\n" +
+        "Axis #2:\n" +
+        "{[Time].[1997].[Q4].[10]}\n" +
+        "{[Time].[1997].[Q4].[11]}\n" +
+        "{[Time].[1997].[Q4].[12]}\n" +
+        "Row #0: 3,802.59\n" +
+        "Row #0: 94.52\n" +
+        "Row #1: \n" +
+        "Row #1: 3,802.59\n" +
+        "Row #2: 4,139.29\n" +
+        "Row #2: \n");
   }
 
   public void testExistingAggSet() {

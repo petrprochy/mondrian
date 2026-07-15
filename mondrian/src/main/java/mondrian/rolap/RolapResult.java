@@ -2215,11 +2215,11 @@ public class RolapResult extends ResultBase {
           for ( int i = 0; i < subList.size(); i++ ) {
             if ( member2.getHierarchy().equals( subList.get( i ).getHierarchy() ) ) {
               index = i;
+              break;
             }
-            break;
           }
           if ( index == -1 ) {
-            return false; // member2's hierarchy not present in tuple
+            return false; // member2's hierarchy is not present in tuple
           }
         }
         if ( member2.isOnSameHierarchyChainInternal( (MemberBase) subList.get( index ) ) ) {
